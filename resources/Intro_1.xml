@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<QuestPage pageId="Intro_1"> 
+	<MainText>
+		<p>Здравствуй <b>ololosh</b>.</p>
+		<p>
+			Вы - ведущий геймдизайнер, работающий в близзард, вы счастливы, богаты, знамениты,
+			постоянно учавствуете в сессиях questions and answers для сайта noob-club.by.
+		</p>
+	</MainText>
+	<PagePicture>Start_picture.jpeg</PagePicture>
+	<Item hyperLink="Intro_2.xml">Далее.</Item>
+</QuestPage>

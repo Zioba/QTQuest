@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>794</width>
+    <height>609</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="1" rowspan="2" colspan="2">
+         <widget class="QTextEdit" name="questInformation"/>
+        </item>
+        <item row="0" column="0">
+         <widget class="QTextEdit" name="logField"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <layout class="QGridLayout" name="gridLayout_3" rowstretch="0,0,0,3,2,0,0,0,0,0" columnstretch="2,1,2,0,0,0" columnminimumwidth="0,0,0,0,0,0">
+        <property name="horizontalSpacing">
+         <number>9</number>
+        </property>
+        <item row="0" column="2" rowspan="2">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>167</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0" rowspan="2">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>167</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="3" colspan="3">
+         <widget class="QLineEdit" name="pictureLineEdit"/>
+        </item>
+        <item row="2" column="0" rowspan="3" colspan="3">
+         <widget class="QTextEdit" name="mainTextEdit"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Основной текст</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="0" colspan="6">
+         <widget class="QTableWidget" name="variantsTextEdit"/>
+        </item>
+        <item row="0" column="3">
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="5" column="4">
+         <widget class="QLineEdit" name="fileNameLine"/>
+        </item>
+        <item row="5" column="3">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Имя Файла</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="4">
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLabel" name="label_2">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Название картинки</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="4">
+         <widget class="QPushButton" name="saveButton">
+          <property name="text">
+           <string>Сохранить</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="5">
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="5" column="0">
+         <widget class="QPushButton" name="addButton">
+          <property name="text">
+           <string>Добавить вариант</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>794</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
