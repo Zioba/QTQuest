@@ -1,0 +1,7 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Вы подходите к магазину, но он закрыт. Довольно странно, ведь все еще 6 часов. Хотя какая вам разница, времени все равно не осталось
+ А причину обиды принцессы вы так и не нашли</MainText>
+ <PagePicture>door.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Аминь.</Item>
+</QuestPage>

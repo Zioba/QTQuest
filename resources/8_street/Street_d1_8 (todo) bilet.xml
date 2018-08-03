@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>!Встреча келя и получение билета!</MainText>
+ <PagePicture>Storeroom.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Выйти на улицу</Item>
+</QuestPage>

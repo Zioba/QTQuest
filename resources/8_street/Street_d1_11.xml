@@ -1,0 +1,7 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Вы решаете отдохнуть, и просто прогулятся по улице, В парке чудесно в это время года. Вы решили отправится туда, посидеть на лужайке, поесть азиатской кухни,
+ и почитать книжку.</MainText>
+ <PagePicture>park.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Пора возвращатся к делам</Item>
+</QuestPage>

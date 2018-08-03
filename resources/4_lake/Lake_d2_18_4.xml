@@ -1,0 +1,7 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Еще 1 выстрел, и тишина... наконец то она сдохла, следующие пару часов вы проводите в полном умиротворении и гармонии с природой
+ </MainText>
+ <PagePicture>shooting.jpeg</PagePicture>
+ <Item hyperLink="Main_Menu.xml">Пуля в утиную печень, и никто не вечен.</Item>
+</QuestPage>

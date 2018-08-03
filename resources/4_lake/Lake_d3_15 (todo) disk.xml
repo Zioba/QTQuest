@@ -1,0 +1,7 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>нырнуть за диском
+ </MainText>
+ <PagePicture>lake.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Пойти дальше.</Item>
+</QuestPage>

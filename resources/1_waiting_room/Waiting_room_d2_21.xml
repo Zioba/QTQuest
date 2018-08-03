@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Вы подходите к кабинету секретарши, но он закрыт. И не удивительно кстати. 9 часов вечера, и, бтв, вам тоже пора баиньки.</MainText>
+ <PagePicture>door.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">День умер. Да здравствует новый день.</Item>
+</QuestPage>

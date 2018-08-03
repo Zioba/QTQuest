@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Вы пришли на озеро, осмотреться, познакомится с крякающей уткой</MainText>
+ <PagePicture>lake.jpeg</PagePicture>
+ <Item hyperLink="Lake_d1_15.xml">Плюнуть в воду</Item>
+</QuestPage>

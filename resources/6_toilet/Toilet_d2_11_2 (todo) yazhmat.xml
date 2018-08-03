@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Конфликт с яжматерью</MainText>
+ <PagePicture>toilet.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Далее.</Item>
+</QuestPage>

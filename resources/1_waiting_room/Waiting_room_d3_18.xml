@@ -1,0 +1,7 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Вы подходите к кабинету секретарши, но он закрыт. Странно, ведь еще только 6 вечера, но в контексте того, что вам осталось 3 часа, 
+ что бы вымолить прощение у принцессы, вас не должна волновать секретарша</MainText>
+ <PagePicture>door.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">‚ыйти на улицу</Item>
+</QuestPage>

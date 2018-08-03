@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Вы подходите к туалету, и с огромным сожалением замечаете табличку "закрыто на уборку". Что ж, придется прийти в другой раз</MainText>
+ <PagePicture>door.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Не сделал дело, гуляй смело.</Item>
+</QuestPage>

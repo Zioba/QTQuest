@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>!Квест на получение кольца!</MainText>
+ <PagePicture>ring.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Получить кольцо</Item>
+</QuestPage>

@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>ХА. Думала его можно где то купить? ХУЮШКИ, надо готовить самой, и на этот раз лучше не ленится...</MainText>
+ <PagePicture>toilet.jpeg</PagePicture>
+ <Item hyperLink="End.xml">Приготовить мясо и пойти на аудиенцию</Item>
+</QuestPage>

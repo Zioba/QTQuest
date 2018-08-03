@@ -21,8 +21,9 @@ public:
 
 private slots:
     void getMessage();
-
     void on_addButton_clicked();
+    void on_saveButton_clicked();
+    void resize();
 
 private:
     const int X_POSITION_FRAME = 0;

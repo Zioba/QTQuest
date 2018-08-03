@@ -1,0 +1,8 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Вы заходите в туалет. Обычный такой, ничем не примечательный туалет.
+ Внутри никого нет. Тишина. Слышны лишь протекающий бачок, и капающий кран. И делать тут абсолютно нечего, разве что...
+</MainText>
+ <PagePicture>toilet.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Сделать дело, гулять смело</Item>
+</QuestPage>
