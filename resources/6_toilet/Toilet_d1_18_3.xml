@@ -1,0 +1,7 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Вы забираете замечательный газовый ключик. Отличное приобретение.
+</MainText>
+ <PagePicture>key.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Далее</Item>
+</QuestPage>

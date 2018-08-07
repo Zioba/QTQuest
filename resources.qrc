@@ -8,7 +8,6 @@
         <file>resources/Intro_3.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d1_11.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d1_15.xml</file>
-        <file>resources/1_waiting_room/Waiting_room_d1_18_1.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d1_18_2.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d1_18_3.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d1_18_3_Guldan.xml</file>
@@ -147,5 +146,6 @@
         <file>resources/10_concert/Concert_d2_21 (todo) roman.xml</file>
         <file>resources/10_concert/Concert_d2_21_1 (todo) mandat .xml</file>
         <file>resources/10_concert/Concert_d3_18 (todo) ppc.xml</file>
+        <file>resources/Main_menu.xml</file>
     </qresource>
 </RCC>

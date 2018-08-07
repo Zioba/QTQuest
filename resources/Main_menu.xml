@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0"?>
 <QuestPage pageId="Intro_2"> 
 	<MainText>
-		<p>
-			Вы выходите на улицу. На вашей физиономии можно прочитать глубокую тоску. Множество различных мыслей атакуют вашу голову. 
-			Шутки с принцессой плохи, И почему то ее имя кажется вам очень знакомым. Вы делаете глубокий вдох, и понимаете что кто то пернул. 
-		</p>
-		<p>
-			Ну чтож, делать нечего, пора взвесить всю имеющуюся информацию, и понять: что же делать дальше, что же произошло, 
-			что вы такого натворили и как успокоить эту обиженку.
-			C чего бы начать...
-		</p>
+		Вы стоите у входа в дворец принцессы, самое время взвесить всю имеющуюся информацию, и понять,
+		Что же делать дальше...
 	</MainText>
-	<PagePicture>Street.jpeg</PagePicture>
-	<Item hyperLink="Main_Menu.xml">Далее.</Item>
+	<PagePicture>Enter.jpeg</PagePicture>
+	<Item hyperLink="1_waiting_room/Waiting_room">Пойти в приемную секретарши.</Item>
+	<Item hyperLink="2_director_office/Director_office">Заглянуть в офис к директору.</Item>
+	<Item hyperLink="3_lake/Lake">Прогуляться на озеро.</Item>
+	<Item hyperLink="5_guard_room/Guard_room">Сходить в коморку охранников.</Item>
+	<Item hyperLink="6_toilet/Toilet">Посетить туалет.</Item>
+	<Item hyperLink="7_shop/Shop">Прикупиться в магазине.</Item>
+	<Item hyperLink="8_street/Street">Прогулятся по улице и подышать воздухом.</Item>
+	<Item hyperLink="9_storeroom/Storeroom">Проверить кладовку.</Item>
+	<Item hyperLink="10_concert/Concert">Сходить на концерт.</Item>
 </QuestPage>

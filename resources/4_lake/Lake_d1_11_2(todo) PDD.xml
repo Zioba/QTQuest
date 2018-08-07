@@ -1,6 +1,0 @@
-﻿<!DOCTYPE QuestPage>
-<QuestPage>
- <MainText>Встетил велосипедиста, !тут задачка на пдд!</MainText>
- <PagePicture>velodtp.jpeg</PagePicture>
- <Item hyperLink="Lake_d1_11_3.xml">Пойти дальше</Item>
-</QuestPage>

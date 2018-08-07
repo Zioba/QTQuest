@@ -19,7 +19,7 @@ MainWindow::MainWindow(QWidget *parent) :
     //myIp.setAddress("212.98.167.242");
     targetIp.setAddress("127.0.0.1");
     makeLogNote(localIP());
-    ui->stackedWidget->setCurrentIndex(1);
+    ui->stackedWidget->setCurrentIndex(0);
     connect(&udpSocket, SIGNAL(readyRead()), this, SLOT(getMessage()));
     connect(ui->variantsTextEdit, SIGNAL(cellChanged(int,int)), this, SLOT(resize()));
 
@@ -32,11 +32,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->variantsTextEdit->verticalHeader()->hide();
     ui->variantsTextEdit->horizontalHeader()->setStretchLastSection(true);
 
-    bag = {true, true, true, true, false, false};
-    bagItemsNames = {"Пачка печенья", "Вилка", "Косметика", "Белорусские рубли", "Кольцо на интеллект", "Газовый ключ"};
-    sum = 1000;
-    step = 0;
-    playerName = "0";
+    initGame();
     //0 - приемная
     //1 - кабинет директора
     //2 - ресепшн
@@ -62,7 +58,8 @@ void MainWindow::makeLogNote(QString s)
 
 void MainWindow::sendPage(QString pageAddress)
 {
-    QString str = ":/resources/";
+    //QString str = ":/resources/";
+    QString str = "C:/QTWork/QTQuestServer/resources/";
     str.append(pageAddress);
     possibleLinks.clear();
     QDomDocument domDoc;
@@ -76,7 +73,14 @@ void MainWindow::sendPage(QString pageAddress)
                     if(!domElement.isNull()) {
                         sendElement(domElement.text());
                         if(domElement.tagName() == "Item") {
-                            possibleLinks.push_back(domElement.attribute("hyperLink", ""));
+                            if (newMove) {
+                                QString s = domElement.attribute("hyperLink", "");
+                                s.append(pripiska);
+                                possibleLinks.push_back(s);
+                            }
+                            else {
+                                possibleLinks.push_back(domElement.attribute("hyperLink", ""));
+                            }
                         }
                     }
                 }
@@ -85,6 +89,7 @@ void MainWindow::sendPage(QString pageAddress)
         }
         file.close();
     }
+    if (newMove) { newMove = false; }
 }
 
 void MainWindow::sendElement(QString element)
@@ -109,6 +114,7 @@ void MainWindow::mainController(QString message)
 {
     QString nextPage;
     if (playerName == "0" || message == "-1") {
+        initGame();
         playerName = message;
         nextPage = "Intro_1.xml";
     }
@@ -116,10 +122,169 @@ void MainWindow::mainController(QString message)
         nextPage = possibleLinks.at(message.toInt(Q_NULLPTR, 10));
 
     }
-    if (nextPage == "mainMenu.xml") {
+    if (nextPage == "Main_menu.xml") {
+        newMove = true;
         step++;
+        switch (step) {
+        case 1:
+            pripiska = "_d1_11.xml";
+            break;
+        case 2:
+            pripiska = "_d1_15.xml";
+            break;
+        case 3:
+            pripiska = "_d1_18.xml";
+            break;
+        case 4:
+            pripiska = "_d1_21.xml";
+            break;
+        case 5:
+            pripiska = "_d2_8.xml";
+            break;
+        case 6:
+            pripiska = "_d2_11.xml";
+            break;
+        case 7:
+            pripiska = "_d2_15.xml";
+            break;
+        case 8:
+            pripiska = "_d2_18.xml";
+            break;
+        case 9:
+            pripiska = "_d2_21.xml";
+            break;
+        case 10:
+            pripiska = "_d3_8.xml";
+            break;
+        case 11:
+            pripiska = "_d3_11.xml";
+            break;
+        case 12:
+            pripiska = "_d3_15.xml";
+            break;
+        case 13:
+            pripiska = "_d3_18.xml";
+            break;
+        default:
+            break;
+        }
+    }
+    //========================
+    if (nextPage == "1_waiting_room/Waiting_room_d2_8_3_Quest") {
+        yazhmatDone = true;
+    }
+    if (nextPage == "1_waiting_room/Waiting_room_d2_18.xml") {
+        if (!yazhmatDone) {
+            nextPage = "1_waiting_room/Waiting_room_d2_18_2.xml";
+        }
+    }
+    if (nextPage == "2_director_office/Director_office_d2_15.xml") {
+        directorDone = true;
+    }
+    if (nextPage == "2_director_office/Director_office_d2_18.xml") {
+        if (!directorDone) {
+            nextPage = "2_director_office/Director_office_d1_21.xml";
+        }
+    }
+    if (nextPage == "2_director_office/Director_office_d2_21.xml") {
+        if (yazhmatDone) {
+            nextPage = "2_director_office/Director_office_d2_21_2.xml";
+        }
+    }
+    if (nextPage == "4_lake/Lake_d1_11_2_2.xml") {
+        sum -=500;
+    }
+    if (nextPage == "4_lake/Lake_d1_15.xml") {
+        hasRing = true;
+    }
+    if (nextPage == "4_lake/Lake_d3_8.xml") {
+        if (!duckAlive) {
+            nextPage = "4_lake/Lake_d3_8_2.xml";
+        }
+    }
+    if (nextPage == "4_lake/Lake_d3_11.xml") {
+        if (!duckAlive) {
+            nextPage = "4_lake/Lake_d3_11_2.xml";
+        }
+    }
+    if (nextPage == "4_lake/Lake_d3_15.xml") {
+        if (!hasAqua) {
+            if (duckAlive) {
+                nextPage = "4_lake/Lake_d3_15_2.xml";
+            }
+            else { nextPage = "4_lake/Lake_d3_15_3.xml"; }
+        }
+        else {
+            hasDisk = true;
+            step--;
+        }
+    }
+    if (nextPage == "5_guard_room/Guard_room_d2_18.xml") {
+        if (hasKey) {
+            nextPage = "5_guard_room/Guard_room_d2_18_2.xml";
+        }
+    }
+    if (nextPage == "5_guard_room/Guard_room_d3_8.xml") {
+        if (!hasMandat) {
+            if (hasKey) {
+                nextPage = "5_guard_room/Guard_room_d3_8_3.xml";
+            }
+            else { nextPage = "5_guard_room/Guard_room_d3_2.xml"; }
+        }
+    }
+    if (nextPage == "5_guard_room/Guard_room_d3_15.xml") {
+        if (!hasDisk) {
+            if (!hasMandat) {
+                nextPage = "5_guard_room/Guard_room_15_2.xml";
+            }
+            else { nextPage = "5_guard_room/Guard_room_d3_15_3.xml"; }
+        }
+    }
+    if (nextPage == "5_guard_room/Guard_room_d3_18.xml") {
+        if (!hasDisk) {
+            if (!hasMandat) {
+                nextPage = "5_guard_room/Guard_room_18_2.xml";
+            }
+            else { nextPage = "5_guard_room/Guard_room_d3_18_3.xml"; }
+        }
+    }
+    //прок ключа
+    if (nextPage == "6_toilet/Toilet_d1_18_3") {
+        hasKey = true;
+    }
+    //прок ключа
+    if (nextPage == "6_toilet/Toilet_d2_18_2" && hasKey == true) {
+        nextPage == "6_toilet/Toilet_d2_18";
+    }
+    if (nextPage == "6_toilet/Toilet_d2_18_3") {
+        hasKey = true;
+    }
+    //прок ключа
+    if (nextPage == "6_toilet/Toilet_d3_18_2" && hasKey == true) {
+        nextPage == "6_toilet/Toilet_d3_18";
+    }
+    if (nextPage == "6_toilet/Toilet_d3_18_3") {
+        hasKey = true;
     }
     sendPage(nextPage);
+}
+
+void MainWindow::initGame()
+{
+    sum = 1000;
+    step = 0;
+    playerName = "0";
+    newMove = false;
+    pripiska = "";
+    hasMandat = false;
+    hasKey = false;
+    hasDisk = false;
+    hasAqua = false;
+    hasRing = false;
+    hasTestDNK = false;
+    yazhmatDone = false;
+    directorDone = false;
+    duckAlive = true;
 }
 
 QString MainWindow::localIP()

@@ -5,6 +5,6 @@
  И тут, внезапно, вы замечаете газовый ключ на полу, хм, полезная вещь в хозяйстве, может пригодиться
 </MainText>
  <PagePicture>key.jpeg</PagePicture>
- <Item hyperLink="Main_menu.xml">Забрать ключ</Item>
+ <Item hyperLink="6_toilet/Toilet_d2_18_3">Забрать ключ</Item>
  <Item hyperLink="Main_menu.xml">Зачем мне этот ключ сдался, забить болт на ключ (лол, болт на ключ)</Item>
 </QuestPage>

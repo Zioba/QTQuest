@@ -12,5 +12,5 @@
 		</p>
 	</MainText>
 	<PagePicture>Street.jpeg</PagePicture>
-	<Item hyperLink="Main_Menu.xml">Далее.</Item>
+	<Item hyperLink="Main_menu.xml">Далее.</Item>
 </QuestPage>

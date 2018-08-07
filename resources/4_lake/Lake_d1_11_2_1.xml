@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>!задачка на пдд!</MainText>
+ <PagePicture>velodtp.jpeg</PagePicture>
+ <Item hyperLink="Lake_d1_11_3.xml">Далее.</Item>
+</QuestPage>

@@ -37,17 +37,30 @@ private:
     QHostAddress myIp;
     QHostAddress targetIp;
 
-    QList<bool> bag;
-    QList<QString> bagItemsNames;
     QList<QString> possibleLinks;
     int sum;
     int step;
     QString playerName;
+    bool newMove;
+    QString pripiska;
+
+    bool hasCookie;
+    bool hasKey;
+    bool hasAqua;
+    bool hasTestDNK;
+    bool hasDisk;
+    bool hasMandat;
+    bool hasRing;
+    bool yazhmatDone;
+    bool directorDone;
+    bool duckAlive;
+
 
     void makeLogNote( QString );
     void sendPage(QString pageAddress);
     void sendElement(QString element);
     void mainController(QString message);
+    void initGame();
     QString localIP();
 };
 
