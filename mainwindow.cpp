@@ -266,6 +266,28 @@ void MainWindow::mainController(QString message)
     if (nextPage == "6_toilet/Toilet_d3_18_3") {
         hasKey = true;
     }
+    //прок победы
+    if (nextPage == "9_storeroom/Storeroom_d1_11") {
+        //прок крыс
+    }
+    if (nextPage == "9_storeroom/Storeroom_d1_18") {
+        //прок крыс
+    }
+    if (nextPage == "9_storeroom/Storeroom_d2_11") {
+        //прок крыс
+    }
+    if (nextPage == "9_storeroom/Storeroom_d2_21") {
+        //прок крыс
+    }
+    if (nextPage == "9_storeroom/Storeroom_d3_15") {
+        //прок крыс
+    }
+    if (nextPage == "9_storeroom/Storeroom_d3_15") {
+        if (guardDone) {
+            nextPage = "9_storeroom/Storeroom_4";
+            razvetkaDone = true;
+        }
+    }
     sendPage(nextPage);
 }
 
@@ -284,6 +306,8 @@ void MainWindow::initGame()
     hasTestDNK = false;
     yazhmatDone = false;
     directorDone = false;
+    razvetkaDone = false;
+    guardDone = false;
     duckAlive = true;
 }
 

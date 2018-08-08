@@ -53,6 +53,8 @@ private:
     bool hasRing;
     bool yazhmatDone;
     bool directorDone;
+    bool guardDone;
+    bool razvetkaDone;
     bool duckAlive;
 
 
