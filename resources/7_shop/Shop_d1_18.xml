@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>!описание оргии!</MainText>
+ <PagePicture>shop.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Продолжить свое бренное существование в другом месте</Item>
+</QuestPage>

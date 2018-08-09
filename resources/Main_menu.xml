@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0"?>
 <QuestPage pageId="Intro_2"> 
 	<MainText>
-		Вы стоите у входа в дворец принцессы, самое время взвесить всю имеющуюся информацию, и понять,
-		Что же делать дальше...
+Вы стоите у входа в дворец принцессы, самое время взвесить всю имеющуюся информацию, и понять,
+Что же делать дальше...
 	</MainText>
 	<PagePicture>Enter.jpeg</PagePicture>
 	<Item hyperLink="1_waiting_room/Waiting_room">Пойти в приемную секретарши.</Item>
 	<Item hyperLink="2_director_office/Director_office">Заглянуть в офис к директору.</Item>
-	<Item hyperLink="3_lake/Lake">Прогуляться на озеро.</Item>
+	<Item hyperLink="4_lake/Lake">Прогуляться на озеро.</Item>
 	<Item hyperLink="5_guard_room/Guard_room">Сходить в коморку охранников.</Item>
 	<Item hyperLink="6_toilet/Toilet">Посетить туалет.</Item>
 	<Item hyperLink="7_shop/Shop">Прикупиться в магазине.</Item>

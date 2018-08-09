@@ -4,5 +4,5 @@
  А хотя знаешь, если ты согласишься посидеть с ребенком пару часиков, я смогу его убедить". Произнеся последнюю фразу секретарша очень странно улыбается</MainText>
  <PagePicture>secretary.jpeg</PagePicture>
  <Item hyperLink="1_waiting_room/Waiting_room_d1_18_3_Quest.xml">Хорошо. Я посижу с твоей 30тилетней личинкой.</Item>
- <Item hyperLink="Main_Menu.xml">Нет уж. Спасибо. Я не собираюсь няньчится с 30тилетним мужиком.</Item>
+ <Item hyperLink="Main_menu.xml">Нет уж. Спасибо. Я не собираюсь няньчится с 30тилетним мужиком.</Item>
 </QuestPage>

@@ -2,5 +2,5 @@
 <QuestPage>
  <MainText>!дать взятку!</MainText>
  <PagePicture>velodtp.jpeg</PagePicture>
- <Item hyperLink="Lake_d1_11_3.xml">Далее.</Item>
+ <Item hyperLink="4_lake/Lake_d1_11_3.xml">Далее.</Item>
 </QuestPage>

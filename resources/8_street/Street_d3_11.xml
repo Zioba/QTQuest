@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>!улететь на гоа с богачом!</MainText>
+ <PagePicture>Storeroom.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Выйти на улицу</Item>
+</QuestPage>

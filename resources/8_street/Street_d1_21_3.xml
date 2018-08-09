@@ -1,0 +1,7 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Отличный выбор, экспресс тест днк работает очень просто, ложишь в ящичек волосы, и он сразу же выдает результат!</MainText>
+ <PagePicture>shop.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Збс, ага, оплатить покупку и пойти спать</Item>
+ <Item hyperLink="8_street/Street_d1_21_4.xml">Украсть тест и бежать что есть сил</Item>
+</QuestPage>

@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Вы приходите на концерт. Удобно распологаетесь в своем кресле. И тут, с ужасом понимаете, что ваш сосед - это директор.</MainText>
+ <PagePicture>Concert.jpeg</PagePicture>
+ <Item hyperLink="10_concert/Concert_d2_21_2_3.xml">Оскалиться, и приготовится защищаться от этого поганого извращенца</Item>
+</QuestPage>

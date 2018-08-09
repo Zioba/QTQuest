@@ -56,6 +56,12 @@ void MainWindow::makeLogNote(QString s)
                           .arg(s));
 }
 
+void MainWindow::makeLogNoteQ(QString s)
+{
+    ui->questInformation->append( tr( "%1 %2" ).arg(QTime::currentTime().toString("hh:mm:ss"))
+                          .arg(s));
+}
+
 void MainWindow::sendPage(QString pageAddress)
 {
     //QString str = ":/resources/";
@@ -71,12 +77,27 @@ void MainWindow::sendPage(QString pageAddress)
                 if(domNode.isElement()) {
                     QDomElement domElement = domNode.toElement();
                     if(!domElement.isNull()) {
-                        sendElement(domElement.text());
+                        if (domElement.text() == "Сходить на концерт.") {
+                            if ((step%5 == 3) || (step%5 == 4)) {
+                                sendElement(domElement.text());
+                            }
+                        }
+                        else {
+                            sendElement(domElement.text());
+                        }
                         if(domElement.tagName() == "Item") {
                             if (newMove) {
                                 QString s = domElement.attribute("hyperLink", "");
-                                s.append(pripiska);
-                                possibleLinks.push_back(s);
+                                if (s == "10_concert/Concert") {
+                                    if ((step%5 == 3) || (step%5 == 4)) {
+                                        s.append(pripiska);
+                                        possibleLinks.push_back(s);
+                                    }
+                                }
+                                else {
+                                    s.append(pripiska);
+                                    possibleLinks.push_back(s);
+                                }
                             }
                             else {
                                 possibleLinks.push_back(domElement.attribute("hyperLink", ""));
@@ -113,14 +134,13 @@ void MainWindow::getMessage()
 void MainWindow::mainController(QString message)
 {
     QString nextPage;
-    if (playerName == "0" || message == "-1") {
+    if (message == "-1" || nextPage == "Intro_1.xml") {
         initGame();
         playerName = message;
         nextPage = "Intro_1.xml";
     }
     else {
         nextPage = possibleLinks.at(message.toInt(Q_NULLPTR, 10));
-
     }
     if (nextPage == "Main_menu.xml") {
         newMove = true;
@@ -166,10 +186,15 @@ void MainWindow::mainController(QString message)
             pripiska = "_d3_18.xml";
             break;
         default:
+            nextPage = "End.xml";
             break;
         }
+        makeLogNoteQ(pripiska);
     }
     //========================
+    if (nextPage == "1_waiting_room/Waiting_room_d1_18_3_Quest") {
+        yazhmatDone = true;
+    }
     if (nextPage == "1_waiting_room/Waiting_room_d2_8_3_Quest") {
         yazhmatDone = true;
     }
@@ -231,13 +256,19 @@ void MainWindow::mainController(QString message)
             }
             else { nextPage = "5_guard_room/Guard_room_d3_2.xml"; }
         }
+        else {
+            zagadkaDone = true;
+        }
     }
     if (nextPage == "5_guard_room/Guard_room_d3_15.xml") {
         if (!hasDisk) {
             if (!hasMandat) {
                 nextPage = "5_guard_room/Guard_room_15_2.xml";
             }
-            else { nextPage = "5_guard_room/Guard_room_d3_15_3.xml"; }
+            else {
+                nextPage = "5_guard_room/Guard_room_d3_15_3.xml";
+                zagadkaDone = true;
+            }
         }
     }
     if (nextPage == "5_guard_room/Guard_room_d3_18.xml") {
@@ -245,47 +276,82 @@ void MainWindow::mainController(QString message)
             if (!hasMandat) {
                 nextPage = "5_guard_room/Guard_room_18_2.xml";
             }
-            else { nextPage = "5_guard_room/Guard_room_d3_18_3.xml"; }
+            else {
+                nextPage = "5_guard_room/Guard_room_d3_18_3.xml";
+                zagadkaDone = true;
+            }
+        }
+        else {
+            guardDone = true;
+            step--;
         }
     }
     //прок ключа
-    if (nextPage == "6_toilet/Toilet_d1_18_3") {
+    if (nextPage == "6_toilet/Toilet_d1_18_3.xml") {
         hasKey = true;
     }
     //прок ключа
-    if (nextPage == "6_toilet/Toilet_d2_18_2" && hasKey == true) {
-        nextPage == "6_toilet/Toilet_d2_18";
+    if (nextPage == "6_toilet/Toilet_d2_18_2.xml" && hasKey == true) {
+        nextPage == "6_toilet/Toilet_d2_18.xml";
     }
-    if (nextPage == "6_toilet/Toilet_d2_18_3") {
+    if (nextPage == "6_toilet/Toilet_d2_18_3.xml") {
         hasKey = true;
     }
     //прок ключа
-    if (nextPage == "6_toilet/Toilet_d3_18_2" && hasKey == true) {
-        nextPage == "6_toilet/Toilet_d3_18";
+    if (nextPage == "6_toilet/Toilet_d3_18_2.xml" && hasKey == true) {
+        nextPage == "6_toilet/Toilet_d3_18.xml";
     }
-    if (nextPage == "6_toilet/Toilet_d3_18_3") {
+    if (nextPage == "6_toilet/Toilet_d3_18_3.xml") {
         hasKey = true;
     }
     //прок победы
-    if (nextPage == "9_storeroom/Storeroom_d1_11") {
+    if (nextPage == "9_storeroom/Storeroom_d1_11.xml") {
         //прок крыс
     }
-    if (nextPage == "9_storeroom/Storeroom_d1_18") {
+    if (nextPage == "9_storeroom/Storeroom_d1_18.xml") {
         //прок крыс
     }
-    if (nextPage == "9_storeroom/Storeroom_d2_11") {
+    if (nextPage == "9_storeroom/Storeroom_d2_11.xml") {
         //прок крыс
     }
-    if (nextPage == "9_storeroom/Storeroom_d2_21") {
+    if (nextPage == "9_storeroom/Storeroom_d2_21.xml") {
         //прок крыс
     }
-    if (nextPage == "9_storeroom/Storeroom_d3_15") {
+    if (nextPage == "9_storeroom/Storeroom_d3_15.xml") {
         //прок крыс
     }
-    if (nextPage == "9_storeroom/Storeroom_d3_15") {
+    if (nextPage == "9_storeroom/Storeroom_d3_18.xml") {
         if (guardDone) {
-            nextPage = "9_storeroom/Storeroom_4";
+            nextPage = "9_storeroom/Storeroom_4.xml";
             razvetkaDone = true;
+        }
+    }
+    if (nextPage == "10_concert/Concert_d2_21.xml") {
+        if (directorDone) {
+            nextPage = "10_concert/Concert_d2_21_2_1.xml";
+            hasMandat = true;
+        }
+    }
+    if (nextPage == "10_concert/Concert_d2_21.xml") {
+        if (directorDone) {
+            nextPage = "10_concert/Concert_d2_21_2_1.xml";
+            hasMandat = true;
+        }
+    }
+    if (nextPage == "7_shop/Shop_d3_11.xml") {
+        if (!zagadkaDone) {
+            nextPage = "7_shop/Shop_d3_11_2.xml";
+        }
+    }
+    if (nextPage == "7_shop/Shop_d3_11_1_2.xml") {
+        hasAqua = true;
+    }
+    if (nextPage == "8_street/Street_d1_21_3.xml") {
+        hasTestDNK = true;
+    }
+    if (nextPage == "End.xml") {
+        if(!razvetkaDone) {
+            nextPage = "End_2.xml";
         }
     }
     sendPage(nextPage);
@@ -307,6 +373,7 @@ void MainWindow::initGame()
     yazhmatDone = false;
     directorDone = false;
     razvetkaDone = false;
+    zagadkaDone = false;
     guardDone = false;
     duckAlive = true;
 }

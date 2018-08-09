@@ -1,7 +1,0 @@
-﻿<!DOCTYPE QuestPage>
-<QuestPage>
- <MainText>Вы заходите в кладовку. Хороший вопрос, а зачем вы вообще сюда пришли.
- Включаете свет, начинаете осматривать помещение, заглядываете в шкафы, пыльные стопки вещей, но ничего особо интересного не находите</MainText>
- <PagePicture>Storeroom.jpeg</PagePicture>
- <Item hyperLink="Main_menu.xml">Выйти на улицу</Item>
-</QuestPage>

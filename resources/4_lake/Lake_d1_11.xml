@@ -2,5 +2,5 @@
 <QuestPage>
  <MainText>Вы идете по улице в сторону озера и вдыхаете ароматы навоза с полей</MainText>
  <PagePicture>street.jpeg</PagePicture>
- <Item hyperLink="Lake_d1_11_2.xml">Пойти дальше</Item>
+ <Item hyperLink="4_lake/Lake_d1_11_2.xml">Пойти дальше</Item>
 </QuestPage>

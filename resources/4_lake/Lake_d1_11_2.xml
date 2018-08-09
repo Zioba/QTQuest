@@ -2,6 +2,6 @@
 <QuestPage>
  <MainText>Встетил велосипедиста, случилось дтп</MainText>
  <PagePicture>velodtp.jpeg</PagePicture>
- <Item hyperLink="Lake_d1_11_2_1.xml">Разобратся в ситуации</Item>
- <Item hyperLink="Lake_d1_11_2_2.xml">Дать взятку гаишнику</Item>
+ <Item hyperLink="4_lake/Lake_d1_11_2_1.xml">Разобратся в ситуации</Item>
+ <Item hyperLink="4_lake/Lake_d1_11_2_2.xml">Дать взятку гаишнику</Item>
 </QuestPage>

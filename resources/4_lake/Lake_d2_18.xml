@@ -9,5 +9,5 @@
  </MainText>
  <PagePicture>lake.jpeg</PagePicture>
  <Item hyperLink="Main_menu.xml">Провести следующие 3 часа выслушиваю треп утки.</Item>
- <Item hyperLink="Lake_d2_18_2.xml">Выстрелить в утку.</Item>
+ <Item hyperLink="4_lake/Lake_d2_18_2.xml">Выстрелить в утку.</Item>
 </QuestPage>

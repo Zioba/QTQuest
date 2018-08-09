@@ -53,12 +53,14 @@ private:
     bool hasRing;
     bool yazhmatDone;
     bool directorDone;
+    bool zagadkaDone;
     bool guardDone;
     bool razvetkaDone;
     bool duckAlive;
 
 
     void makeLogNote( QString );
+    void makeLogNoteQ( QString );
     void sendPage(QString pageAddress);
     void sendElement(QString element);
     void mainController(QString message);

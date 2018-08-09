@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>!встреча с обычным романом!</MainText>
+ <PagePicture>Concert.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Выйти на улицу</Item>
+</QuestPage>

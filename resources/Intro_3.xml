@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0"?>
-<QuestPage pageId="Intro_2"> 
+<QuestPage pageId="Intro_3"> 
 	<MainText>
 		<p>
 			Вы выходите на улицу. На вашей физиономии можно прочитать глубокую тоску. Множество различных мыслей атакуют вашу голову. 
@@ -12,5 +12,5 @@
 		</p>
 	</MainText>
 	<PagePicture>Street.jpeg</PagePicture>
-	<Item hyperLink="Main_menu.xml">Далее.</Item>
+	<Item hyperLink="Intro_4.xml">Далее.</Item>
 </QuestPage>

@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>!найти жену манкрика!</MainText>
+ <PagePicture>Street.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Вернутся к дворцу</Item>
+</QuestPage>

@@ -13,25 +13,20 @@
         <file>resources/1_waiting_room/Waiting_room_d1_18_3_Guldan.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d1_18_3_Metabol.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d1_18_3_Mistborn.xml</file>
-        <file>resources/1_waiting_room/Waiting_room_d1_18_3_Quest  (todo).xml</file>
         <file>resources/1_waiting_room/Waiting_room_d1_21.xml</file>
-        <file>resources/1_waiting_room/Waiting_room_d2_8_1.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d2_8_2.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d2_8_3.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d2_8_3_Interfer.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d2_8_3_Kiljaedan.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d2_8_3_Mistborn.xml</file>
-        <file>resources/1_waiting_room/Waiting_room_d2_8_3_Quest (todo).xml</file>
         <file>resources/1_waiting_room/Waiting_room_d2_11.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d2_15.xml</file>
-        <file>resources/1_waiting_room/Waiting_room_d2_18_1.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d2_18_2.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d2_18_3.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d2_18_4.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d2_18_4_Interfer.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d2_18_4_Kiljaedan.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d2_18_4_Mistborn.xml</file>
-        <file>resources/1_waiting_room/Waiting_room_d2_18_4_Quest  (todo).xml</file>
         <file>resources/1_waiting_room/Waiting_room_d2_21.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d3_8.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d3_11.xml</file>
@@ -43,18 +38,13 @@
         <file>resources/2_director_office/Director_office_d1_21.xml</file>
         <file>resources/2_director_office/Director_office_d2_8.xml</file>
         <file>resources/2_director_office/Director_office_d2_11.xml</file>
-        <file>resources/2_director_office/Director_office_d2_15 (todo) visit.xml</file>
         <file>resources/2_director_office/Director_office_d2_18.xml</file>
-        <file>resources/2_director_office/Director_office_d2_21_1.xml</file>
         <file>resources/2_director_office/Director_office_d2_21_2.xml</file>
         <file>resources/2_director_office/Director_office_d3_8.xml</file>
         <file>resources/2_director_office/Director_office_d3_11.xml</file>
         <file>resources/2_director_office/Director_office_d3_15.xml</file>
         <file>resources/2_director_office/Director_office_d3_18.xml</file>
-        <file>resources/4_lake/Lake_d1_11_1.xml</file>
-        <file>resources/4_lake/Lake_d1_11_2(todo) PDD.xml</file>
         <file>resources/4_lake/Lake_d1_11_3.xml</file>
-        <file>resources/4_lake/Lake_d1_15(todo) ring.xml</file>
         <file>resources/4_lake/Lake_d1_18.xml</file>
         <file>resources/4_lake/Lake_d1_21.xml</file>
         <file>resources/4_lake/Lake_d2_8.xml</file>
@@ -65,11 +55,8 @@
         <file>resources/4_lake/Lake_d2_18_3.xml</file>
         <file>resources/4_lake/Lake_d2_18_4.xml</file>
         <file>resources/4_lake/Lake_d2_21.xml</file>
-        <file>resources/4_lake/Lake_d3_8_1.xml</file>
         <file>resources/4_lake/Lake_d3_8_2.xml</file>
-        <file>resources/4_lake/Lake_d3_11_1.xml</file>
         <file>resources/4_lake/Lake_d3_11_2.xml</file>
-        <file>resources/4_lake/Lake_d3_15 (todo) disk.xml</file>
         <file>resources/4_lake/Lake_d3_18_1.xml</file>
         <file>resources/4_lake/Lake_d3_18_2.xml</file>
         <file>resources/5_guard_room/Guard_room_d1_11.xml</file>
@@ -80,72 +67,43 @@
         <file>resources/5_guard_room/Guard_room_d2_11.xml</file>
         <file>resources/5_guard_room/Guard_room_d2_15.xml</file>
         <file>resources/5_guard_room/Guard_room_d2_18_1.xml</file>
-        <file>resources/5_guard_room/Guard_room_d2_18_2(todo) key.xml</file>
         <file>resources/5_guard_room/Guard_room_d2_21.xml</file>
-        <file>resources/5_guard_room/Guard_room_d3_8_1.xml</file>
-        <file>resources/5_guard_room/Guard_room_d3_8_2 (todo) mandat.xml</file>
         <file>resources/5_guard_room/Guard_room_d3_11.xml</file>
-        <file>resources/5_guard_room/Guard_room_d3_15_1.xml</file>
-        <file>resources/5_guard_room/Guard_room_d3_15_2 (todo) mandat.xml</file>
-        <file>resources/5_guard_room/Guard_room_d3_15_3 (todo) disk.xml</file>
-        <file>resources/5_guard_room/Guard_room_d3_18_1.xml</file>
-        <file>resources/5_guard_room/Guard_room_d3_18_2 (todo) mandat.xml</file>
-        <file>resources/5_guard_room/Guard_room_d3_18_3 (todo) disk.xml</file>
         <file>resources/6_toilet/Toilet_d1_11.xml</file>
         <file>resources/6_toilet/Toilet_d1_15.xml</file>
-        <file>resources/6_toilet/Toilet_d1_18_1.xml</file>
         <file>resources/6_toilet/Toilet_d1_18_2.xml</file>
         <file>resources/6_toilet/Toilet_d1_21.xml</file>
         <file>resources/6_toilet/Toilet_d2_8.xml</file>
-        <file>resources/6_toilet/Toilet_d2_11_1.xml</file>
         <file>resources/6_toilet/Toilet_d2_11_2 (todo) yazhmat.xml</file>
         <file>resources/6_toilet/Toilet_d2_15.xml</file>
-        <file>resources/6_toilet/Toilet_d2_18_1.xml</file>
         <file>resources/6_toilet/Toilet_d2_18_2.xml</file>
         <file>resources/6_toilet/Toilet_d2_21.xml</file>
         <file>resources/6_toilet/Toilet_d3_8.xml</file>
         <file>resources/6_toilet/Toilet_d3_11.xml</file>
         <file>resources/6_toilet/Toilet_d3_15.xml</file>
-        <file>resources/6_toilet/Toilet_d3_18_1.xml</file>
         <file>resources/6_toilet/Toilet_d3_18_2.xml</file>
-        <file>resources/7_shop/Shop_d1_11 (todo) krim.xml</file>
         <file>resources/7_shop/Shop_d1_15.xml</file>
         <file>resources/7_shop/Shop_d1_18 (todo) orgy.xml</file>
         <file>resources/7_shop/Shop_d1_21.xml</file>
         <file>resources/7_shop/Shop_d2_8.xml</file>
-        <file>resources/7_shop/Shop_d2_11 (todo) old boyfriend.xml</file>
         <file>resources/7_shop/Shop_d2_15.xml</file>
-        <file>resources/7_shop/Shop_d2_18 (todo) new boyfriend.xml</file>
         <file>resources/7_shop/Shop_d2_21.xml</file>
         <file>resources/7_shop/Shop_d3_8.xml</file>
         <file>resources/7_shop/Shop_d3_11 (todo) vodolaz.xml</file>
         <file>resources/7_shop/Shop_d3_15.xml</file>
         <file>resources/7_shop/Shop_d3_18.xml</file>
-        <file>resources/8_street/Street_d1_8 (todo) bilet.xml</file>
         <file>resources/8_street/Street_d1_11.xml</file>
-        <file>resources/8_street/Street_d1_15 (todo) mankrik.xml</file>
         <file>resources/8_street/Street_d1_18.xml</file>
-        <file>resources/8_street/Street_d1_21 (todo) testDNK.xml</file>
-        <file>resources/8_street/Street_d2_8 (todo) babulya.xml</file>
         <file>resources/8_street/Street_d2_11.xml</file>
         <file>resources/8_street/Street_d2_15.xml</file>
         <file>resources/8_street/Street_d2_18.xml</file>
         <file>resources/8_street/Street_d2_21.xml</file>
         <file>resources/8_street/Street_d3_8.xml</file>
-        <file>resources/8_street/Street_d3_11 (todo) goa.xml</file>
         <file>resources/8_street/Street_d3_15.xml</file>
         <file>resources/8_street/Street_d3_18.xml</file>
         <file>resources/9_storeroom/Storeroom_1.xml</file>
         <file>resources/9_storeroom/Storeroom_1_2.xml</file>
-        <file>resources/9_storeroom/Storeroom_2.xml</file>
         <file>resources/9_storeroom/Storeroom_3.xml</file>
-        <file>resources/9_storeroom/Storeroom_4 (todo) razvedka.xml</file>
-        <file>resources/10_concert/Concert_d1_18 (todo) kritik.xml</file>
-        <file>resources/10_concert/Concert_d1_21 (todo) bablo.xml</file>
-        <file>resources/10_concert/Concert_d2_18 (todo) terror.xml</file>
-        <file>resources/10_concert/Concert_d2_21 (todo) roman.xml</file>
-        <file>resources/10_concert/Concert_d2_21_1 (todo) mandat .xml</file>
-        <file>resources/10_concert/Concert_d3_18 (todo) ppc.xml</file>
         <file>resources/Main_menu.xml</file>
     </qresource>
 </RCC>

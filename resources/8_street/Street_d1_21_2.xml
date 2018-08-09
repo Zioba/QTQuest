@@ -1,0 +1,11 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Подходи, налетай, рот закрывай, глаза открывай, сука покупай!!!" кричит продавец высокогорнокавказской внешности
+ "Все по писсот (500) близкоинов"</MainText>
+ <PagePicture>shop.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Спасибо, не надо мне такого добра</Item>
+ <Item hyperLink="8_street/Street_d1_21_3.xml">Купить экспресс тест днк</Item>
+ <Item hyperLink="8_street/Street_d1_21_5.xml">Купить попрыгунчик</Item>
+ <Item hyperLink="8_street/Street_d1_21_5.xml">Купить дырявые трусы</Item>
+ <Item hyperLink="8_street/Street_d1_21_5.xml">Купить черного раба</Item>
+</QuestPage>

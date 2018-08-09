@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Ой сори, их раскупили 5 минут назад :-( Могу ли я предложить тебе купить что нибудь другое?</MainText>
+ <PagePicture>Shop.jpeg</PagePicture>
+ <Item hyperLink="8_street/Street_d1_21_2.xml">"Продавец пидорас, я нассал бы ему в глаз". выбрать что нибудь другое</Item>
+</QuestPage>
