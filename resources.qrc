@@ -23,7 +23,6 @@
         <file>resources/1_waiting_room/Waiting_room_d2_15.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d2_18_2.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d2_18_3.xml</file>
-        <file>resources/1_waiting_room/Waiting_room_d2_18_4.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d2_18_4_Interfer.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d2_18_4_Kiljaedan.xml</file>
         <file>resources/1_waiting_room/Waiting_room_d2_18_4_Mistborn.xml</file>
@@ -57,7 +56,6 @@
         <file>resources/4_lake/Lake_d2_21.xml</file>
         <file>resources/4_lake/Lake_d3_8_2.xml</file>
         <file>resources/4_lake/Lake_d3_11_2.xml</file>
-        <file>resources/4_lake/Lake_d3_18_1.xml</file>
         <file>resources/4_lake/Lake_d3_18_2.xml</file>
         <file>resources/5_guard_room/Guard_room_d1_11.xml</file>
         <file>resources/5_guard_room/Guard_room_d1_15.xml</file>
@@ -83,13 +81,11 @@
         <file>resources/6_toilet/Toilet_d3_15.xml</file>
         <file>resources/6_toilet/Toilet_d3_18_2.xml</file>
         <file>resources/7_shop/Shop_d1_15.xml</file>
-        <file>resources/7_shop/Shop_d1_18 (todo) orgy.xml</file>
         <file>resources/7_shop/Shop_d1_21.xml</file>
         <file>resources/7_shop/Shop_d2_8.xml</file>
         <file>resources/7_shop/Shop_d2_15.xml</file>
         <file>resources/7_shop/Shop_d2_21.xml</file>
         <file>resources/7_shop/Shop_d3_8.xml</file>
-        <file>resources/7_shop/Shop_d3_11 (todo) vodolaz.xml</file>
         <file>resources/7_shop/Shop_d3_15.xml</file>
         <file>resources/7_shop/Shop_d3_18.xml</file>
         <file>resources/8_street/Street_d1_11.xml</file>
@@ -105,5 +101,90 @@
         <file>resources/9_storeroom/Storeroom_1_2.xml</file>
         <file>resources/9_storeroom/Storeroom_3.xml</file>
         <file>resources/Main_menu.xml</file>
+        <file>resources/1_waiting_room/Waiting_room_d1_18.xml</file>
+        <file>resources/1_waiting_room/Waiting_room_d1_18_3_Quest.xml</file>
+        <file>resources/1_waiting_room/Waiting_room_d2_8.xml</file>
+        <file>resources/1_waiting_room/Waiting_room_d2_8_3_Quest.xml</file>
+        <file>resources/1_waiting_room/Waiting_room_d2_18.xml</file>
+        <file>resources/1_waiting_room/Waiting_room_d2_18_4.xml</file>
+        <file>resources/1_waiting_room/Waiting_room_d2_18_4_Quest.xml</file>
+        <file>resources/2_director_office/Director_office_d2_15.xml</file>
+        <file>resources/2_director_office/Director_office_d2_21.xml</file>
+        <file>resources/4_lake/Lake_d1_11.xml</file>
+        <file>resources/4_lake/Lake_d1_11_2.xml</file>
+        <file>resources/4_lake/Lake_d1_11_2_1.xml</file>
+        <file>resources/4_lake/Lake_d1_11_2_2.xml</file>
+        <file>resources/4_lake/Lake_d1_15.xml</file>
+        <file>resources/4_lake/Lake_d3_8.xml</file>
+        <file>resources/4_lake/Lake_d3_11.xml</file>
+        <file>resources/4_lake/Lake_d3_15.xml</file>
+        <file>resources/4_lake/Lake_d3_15_2.xml</file>
+        <file>resources/4_lake/Lake_d3_15_3.xml</file>
+        <file>resources/4_lake/Lake_d3_18.xml</file>
+        <file>resources/5_guard_room/Guard_room_d2_18_2.xml</file>
+        <file>resources/5_guard_room/Guard_room_d2_18_3.xml</file>
+        <file>resources/5_guard_room/Guard_room_d3_8.xml</file>
+        <file>resources/5_guard_room/Guard_room_d3_8_2.xml</file>
+        <file>resources/5_guard_room/Guard_room_d3_8_3.xml</file>
+        <file>resources/5_guard_room/Guard_room_d3_8_4.xml</file>
+        <file>resources/5_guard_room/Guard_room_d3_15.xml</file>
+        <file>resources/5_guard_room/Guard_room_d3_15_2.xml</file>
+        <file>resources/5_guard_room/Guard_room_d3_15_3.xml</file>
+        <file>resources/5_guard_room/Guard_room_d3_18.xml</file>
+        <file>resources/5_guard_room/Guard_room_d3_18_2.xml</file>
+        <file>resources/5_guard_room/Guard_room_d3_18_3.xml</file>
+        <file>resources/6_toilet/Toilet_d1_18.xml</file>
+        <file>resources/6_toilet/Toilet_d1_18_3.xml</file>
+        <file>resources/6_toilet/Toilet_d2_11.xml</file>
+        <file>resources/6_toilet/Toilet_d2_18.xml</file>
+        <file>resources/6_toilet/Toilet_d2_18_3.xml</file>
+        <file>resources/6_toilet/Toilet_d3_18.xml</file>
+        <file>resources/6_toilet/Toilet_d3_18_3.xml</file>
+        <file>resources/7_shop/Shop_d1_11.xml</file>
+        <file>resources/7_shop/Shop_d1_18.xml</file>
+        <file>resources/7_shop/Shop_d2_11.xml</file>
+        <file>resources/7_shop/Shop_d2_18.xml</file>
+        <file>resources/7_shop/Shop_d3_11.xml</file>
+        <file>resources/7_shop/Shop_d3_11_1_1.xml</file>
+        <file>resources/7_shop/Shop_d3_11_1_2.xml</file>
+        <file>resources/7_shop/Shop_d3_11_2.xml</file>
+        <file>resources/8_street/Street_d1_8.xml</file>
+        <file>resources/8_street/Street_d1_15.xml</file>
+        <file>resources/8_street/Street_d1_21.xml</file>
+        <file>resources/8_street/Street_d1_21_2.xml</file>
+        <file>resources/8_street/Street_d1_21_3.xml</file>
+        <file>resources/8_street/Street_d1_21_4.xml</file>
+        <file>resources/8_street/Street_d1_21_5.xml</file>
+        <file>resources/8_street/Street_d2_8.xml</file>
+        <file>resources/8_street/Street_d3_11.xml</file>
+        <file>resources/9_storeroom/Storeroom_4.xml</file>
+        <file>resources/9_storeroom/Storeroom_d1_11.xml</file>
+        <file>resources/9_storeroom/Storeroom_d1_15.xml</file>
+        <file>resources/9_storeroom/Storeroom_d1_18.xml</file>
+        <file>resources/9_storeroom/Storeroom_d1_21.xml</file>
+        <file>resources/9_storeroom/Storeroom_d2_8.xml</file>
+        <file>resources/9_storeroom/Storeroom_d2_11.xml</file>
+        <file>resources/9_storeroom/Storeroom_d2_15.xml</file>
+        <file>resources/9_storeroom/Storeroom_d2_18.xml</file>
+        <file>resources/9_storeroom/Storeroom_d2_21.xml</file>
+        <file>resources/9_storeroom/Storeroom_d3_8.xml</file>
+        <file>resources/9_storeroom/Storeroom_d3_11.xml</file>
+        <file>resources/9_storeroom/Storeroom_d3_15.xml</file>
+        <file>resources/9_storeroom/Storeroom_d3_18.xml</file>
+        <file>resources/10_concert/Concert_d1_18.xml</file>
+        <file>resources/10_concert/Concert_d1_18_2.xml</file>
+        <file>resources/10_concert/Concert_d1_21.xml</file>
+        <file>resources/10_concert/Concert_d2_18.xml</file>
+        <file>resources/10_concert/Concert_d2_21.xml</file>
+        <file>resources/10_concert/Concert_d2_21_2_1.xml</file>
+        <file>resources/10_concert/Concert_d2_21_2_2.xml</file>
+        <file>resources/10_concert/Concert_d2_21_2_3.xml</file>
+        <file>resources/10_concert/Concert_d2_21_2_4.xml</file>
+        <file>resources/10_concert/Concert_d3_18.xml</file>
+        <file>resources/End.xml</file>
+        <file>resources/End_2.xml</file>
+        <file>resources/Intro_4.xml</file>
+        <file>resources/New_game.xml</file>
+        <file>resources/Reception_d1_18 (todo).xml</file>
     </qresource>
 </RCC>

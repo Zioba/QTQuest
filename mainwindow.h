@@ -66,6 +66,7 @@ private:
     void mainController(QString message);
     void initGame();
     QString localIP();
+    void sendBag();
 };
 
 #endif // MAINWINDOW_H

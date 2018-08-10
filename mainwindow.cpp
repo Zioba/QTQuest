@@ -111,6 +111,8 @@ void MainWindow::sendPage(QString pageAddress)
         file.close();
     }
     if (newMove) { newMove = false; }
+    sendElement("#");
+    sendBag();
 }
 
 void MainWindow::sendElement(QString element)
@@ -118,7 +120,6 @@ void MainWindow::sendElement(QString element)
     QByteArray datagram;
     datagram.append(element);
     udpSocket.writeDatagram(datagram, targetIp, targetPort.toLong(Q_NULLPTR, 10));
-    makeLogNote("отправлен пакет");
 }
 
 void MainWindow::getMessage()
@@ -192,10 +193,10 @@ void MainWindow::mainController(QString message)
         makeLogNoteQ(pripiska);
     }
     //========================
-    if (nextPage == "1_waiting_room/Waiting_room_d1_18_3_Quest") {
+    if (nextPage == "1_waiting_room/Waiting_room_d1_18_3_Quest.xml") {
         yazhmatDone = true;
     }
-    if (nextPage == "1_waiting_room/Waiting_room_d2_8_3_Quest") {
+    if (nextPage == "1_waiting_room/Waiting_room_d2_8_3_Quest.xml") {
         yazhmatDone = true;
     }
     if (nextPage == "1_waiting_room/Waiting_room_d2_18.xml") {
@@ -204,7 +205,12 @@ void MainWindow::mainController(QString message)
         }
     }
     if (nextPage == "2_director_office/Director_office_d2_15.xml") {
-        directorDone = true;
+        if (yazhmatDone) {
+            directorDone = true;
+        }
+        else {
+            nextPage = "2_director_office/Director_office_d2_11.xml";
+        }
     }
     if (nextPage == "2_director_office/Director_office_d2_18.xml") {
         if (!directorDone) {
@@ -244,6 +250,11 @@ void MainWindow::mainController(QString message)
             step--;
         }
     }
+    if (nextPage == "4_lake/Lake_d3_18.xml") {
+        if (!duckAlive) {
+            nextPage = "4_lake/Lake_d3_18_2.xml";
+        }
+    }
     if (nextPage == "5_guard_room/Guard_room_d2_18.xml") {
         if (hasKey) {
             nextPage = "5_guard_room/Guard_room_d2_18_2.xml";
@@ -270,6 +281,9 @@ void MainWindow::mainController(QString message)
                 zagadkaDone = true;
             }
         }
+        else {
+            guardDone = true;
+        }
     }
     if (nextPage == "5_guard_room/Guard_room_d3_18.xml") {
         if (!hasDisk) {
@@ -283,7 +297,6 @@ void MainWindow::mainController(QString message)
         }
         else {
             guardDone = true;
-            step--;
         }
     }
     //прок ключа
@@ -345,9 +358,11 @@ void MainWindow::mainController(QString message)
     }
     if (nextPage == "7_shop/Shop_d3_11_1_2.xml") {
         hasAqua = true;
+        sum -=500;
     }
     if (nextPage == "8_street/Street_d1_21_3.xml") {
         hasTestDNK = true;
+        sum -=500;
     }
     if (nextPage == "End.xml") {
         if(!razvetkaDone) {
@@ -376,6 +391,33 @@ void MainWindow::initGame()
     zagadkaDone = false;
     guardDone = false;
     duckAlive = true;
+}
+
+void MainWindow::sendBag() {
+    QString s("Сумма: ");
+    s.append(QString::number(sum,10));
+    sendElement(s);
+    if (hasCookie) {
+        sendElement("Печеньки");
+    }
+    if (hasKey) {
+        sendElement("Газовый ключ");
+    }
+    if (hasAqua) {
+        sendElement("Водолазный комплект");
+    }
+    if (hasTestDNK) {
+        sendElement("Экспресс тестДНК");
+    }
+    if (hasDisk) {
+        sendElement("Диск доты");
+    }
+    if (hasMandat) {
+        sendElement("Мандат от директора");
+    }
+    if (hasRing) {
+        sendElement("Кольцо на интеллект");
+    }
 }
 
 QString MainWindow::localIP()
