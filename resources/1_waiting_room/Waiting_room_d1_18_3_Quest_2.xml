@@ -1,0 +1,8 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Ребенок оказался тихий и спокойный, он просто сидел на месте и играл со своим паровозиком. Но внезапно тревого появилась на его лице.
+ Он подбегает вам и говорит:
+ "Тетя, тетя, я хочу в туалет!!!"</MainText>
+ <PagePicture>secretary.jpeg</PagePicture>
+ <Item hyperLink="1_waiting_room/Waiting_room_d1_18_3_Quest_3.xml">"О господи, ты что сам сходить не можешь?"</Item>
+</QuestPage>

@@ -15,8 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
     setWindowTitle("Квест Сервер");
     makeLogNote("Начало работы");
     udpSocket.bind( LISTERNING_PORT );
-    myIp.setAddress("172.16.0.139");
-    //myIp.setAddress("212.98.167.242");
+    myIp.setAddress("127.0.0.1");
     targetIp.setAddress("127.0.0.1");
     makeLogNote(localIP());
     ui->stackedWidget->setCurrentIndex(0);
@@ -192,6 +191,21 @@ void MainWindow::mainController(QString message)
         }
         makeLogNoteQ(pripiska);
     }
+    if (nextPage == "End.xml") {
+        if(!razvetkaDone) {
+            nextPage = "End_2.xml";
+        }
+    }
+    if (nextPage == "End_2.xml_d3_18.xml") {
+        if(!razvetkaDone) {
+            nextPage = "End_2.xml";
+        }
+    }
+    if (nextPage == "End.xml_d3_18.xml") {
+        if(!razvetkaDone) {
+            nextPage = "End.xml";
+        }
+    }
     //========================
     if (nextPage == "1_waiting_room/Waiting_room_d1_18_3_Quest.xml") {
         yazhmatDone = true;
@@ -363,11 +377,6 @@ void MainWindow::mainController(QString message)
     if (nextPage == "8_street/Street_d1_21_3.xml") {
         hasTestDNK = true;
         sum -=500;
-    }
-    if (nextPage == "End.xml") {
-        if(!razvetkaDone) {
-            nextPage = "End_2.xml";
-        }
     }
     sendPage(nextPage);
 }

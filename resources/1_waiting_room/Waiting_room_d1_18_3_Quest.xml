@@ -1,6 +1,8 @@
 ﻿<!DOCTYPE QuestPage>
 <QuestPage>
- <MainText>Квест на яжмать</MainText>
+ <MainText>Вы сидите с ребенком. Гуляете с ним по коридорам туда сюда. Абсурдность того, что это 30тилетний мужик не оставляет вас в покое. Но черт с ним.
+ Вам повезло, ребенок довольно спокойный и не шумный.</MainText>
  <PagePicture>secretary.jpeg</PagePicture>
- <Item hyperLink="Main_menu.xml">Далее.</Item>
+ <Item hyperLink="1_waiting_room/Waiting_room_d1_18_3_Quest_2.xml">Сесть на пуффик и смотреть за ним издаленка.</Item>
 </QuestPage>
+

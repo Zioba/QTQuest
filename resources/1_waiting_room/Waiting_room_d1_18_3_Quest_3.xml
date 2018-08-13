@@ -1,0 +1,7 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>"Мне одному страшно, мама никогда не отпускает меня одного никуда". Вы уже несколько раз описали мысленно эту ситуацию благим матом, надо решить что делать</MainText>
+ <PagePicture>secretary.jpeg</PagePicture>
+ <Item hyperLink="1_waiting_room/Waiting_room_d1_18_3_Quest_4.xml">"Ладно, пошли в туалет"</Item>
+ <Item hyperLink="1_waiting_room/Waiting_room_d1_18_3_Quest_4_2.xml">"Уже большой взрослый пень, иди сам"</Item>
+</QuestPage>
