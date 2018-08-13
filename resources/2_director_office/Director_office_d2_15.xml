@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE QuestPage>
 <QuestPage>
- <MainText>Аудиенция у директора</MainText>
- <PagePicture>door.jpeg</PagePicture>
- <Item hyperLink="Main_menu.xml">Выйти на улицу.</Item>
+ <MainText>Вы заходите в просторный светлый кабинет. Директор сидит в своем кресле, и мило улыбается вам.
+ "Добрый день. По какому поводу пожаловали? видимо дело очень срочное и важное, раз секретарша так сильно настаивала на аудиенции."</MainText>
+ <PagePicture>director.jpeg</PagePicture>
+ <Item hyperLink="2_director_office/Director_office_d2_15_2.xml">Рассказать о своей проблеме.</Item>
 </QuestPage>

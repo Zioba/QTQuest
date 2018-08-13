@@ -1,0 +1,7 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Отличное решение, бабуля уже устала, и надо было немного снизить темп, и вот последний шаг, и дело сделано. Бабуля бесконечно благодарна вам за помощь,
+ расцеловала, и пошла по своим делам</MainText>
+ <PagePicture>babka.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Тоже пойти дальше по своим делам</Item>
+</QuestPage>

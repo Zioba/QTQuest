@@ -1,0 +1,9 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Вы начинаете медленно двигаться. Отличный выбор, бабулька старенька, ей резко трогаться нельзя, да и машины успевают вас заметить.
+ Треть дистанции пройдено. В каком темпе продолжить движение?</MainText>
+ <PagePicture>trassa.jpeg</PagePicture>
+ <Item hyperLink="8_street/Street_d2_8_minus_babka.xml">Повести дальше медленно</Item>
+ <Item hyperLink="8_street/Street_d2_8_too_fast.xml">Повести дальше в среднем темпе</Item>
+ <Item hyperLink="8_street/Street_d2_8_4.xml">Повести дальше быстро</Item>
+</QuestPage>

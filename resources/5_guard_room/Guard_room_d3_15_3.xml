@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE QuestPage>
 <QuestPage>
  <MainText>!Охранник загадывает загадку!</MainText>
- <PagePicture>door.jpeg</PagePicture>
+ <PagePicture>gurdian.jpeg</PagePicture>
  <Item hyperLink="Main_menu.xml">Далее.</Item>
  </QuestPage>

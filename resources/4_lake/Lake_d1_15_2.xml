@@ -1,0 +1,21 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>"И так, внимание, вопрос:
+ Каков был сетап танков у гильдии экзорсус на 2ом убийстве Деспотичной Велари?"</MainText>
+ <PagePicture>rusalka.jpeg</PagePicture>
+ <Item hyperLink="4_lake/Lake_d1_15_4.xml">вар-вар</Item>
+ <Item hyperLink="4_lake/Lake_d1_15_4.xml">монк-монк</Item>
+ <Item hyperLink="4_lake/Lake_d1_15_4.xml">дк-дк</Item>
+ <Item hyperLink="4_lake/Lake_d1_15_4.xml">пал-пал</Item>
+ <Item hyperLink="4_lake/Lake_d1_15_4.xml">друид-вар</Item>
+ <Item hyperLink="4_lake/Lake_d1_15_3.xml">друид-монк</Item>
+ <Item hyperLink="4_lake/Lake_d1_15_4.xml">друид-дк</Item>
+ <Item hyperLink="4_lake/Lake_d1_15_4.xml">друид-пал</Item>
+ <Item hyperLink="4_lake/Lake_d1_15_3.xml">друид-друид</Item>
+ <Item hyperLink="4_lake/Lake_d1_15_4.xml">вар-монк</Item>
+ <Item hyperLink="4_lake/Lake_d1_15_4.xml">вар-дк</Item>
+ <Item hyperLink="4_lake/Lake_d1_15_4.xml">вар-пал</Item>
+ <Item hyperLink="4_lake/Lake_d1_15_4.xml">монк-дк</Item>
+ <Item hyperLink="4_lake/Lake_d1_15_3.xml">монк-пал</Item>
+ <Item hyperLink="4_lake/Lake_d1_15_4.xml">дк-пал</Item>
+</QuestPage>
