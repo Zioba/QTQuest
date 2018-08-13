@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE QuestPage>
 <QuestPage>
- <MainText>!Охранник загадывает загадку!</MainText>
+ <MainText>Вы заходите в коморку охранника, при виде вас это пьяное тело просыпается, и уже собирается скрутить вас.</MainText>
  <PagePicture>gurdian.jpeg</PagePicture>
- <Item hyperLink="Main_menu.xml">Далее.</Item>
- </QuestPage>
+ <Item hyperLink="Main_menu.xml">Убежать.</Item>
+ <Item hyperLink="5_guard_room/Guard_room_d3_15_3_2.xml">Показать мандат.</Item>
+</QuestPage>

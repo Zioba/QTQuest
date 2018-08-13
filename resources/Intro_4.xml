@@ -1,11 +1,9 @@
 ﻿<?xml version="1.0"?>
 <QuestPage pageId="Intro_4"> 
-	<MainText>
-	<p>
+<MainText>
 Вы стоите у входа в дворец принцессы, самое время взвесить всю имеющуюся информацию, и понять,
 Что же делать дальше...
-	</p>
-	</MainText>
+</MainText>
 	<PagePicture>Street.jpeg</PagePicture>
 	<Item hyperLink="8_street/Street_d1_8.xml">Прогулятся по улице и собраться с мыслями</Item>
 </QuestPage>

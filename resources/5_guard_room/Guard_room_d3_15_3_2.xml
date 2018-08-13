@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>"Ммм, какая важная персона к нам пожаловала, да и еще с приглашениями от таких важных персон. Чем могу быть полезен?"</MainText>
+ <PagePicture>gurdian.jpeg</PagePicture>
+ <Item hyperLink="5_guard_room/Guard_room_d3_15_3_3.xml">Рассказать о своей проблеме.</Item>
+</QuestPage>

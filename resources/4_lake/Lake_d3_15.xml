@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE QuestPage>
 <QuestPage>
- <MainText>нырнуть за диском
- </MainText>
+ <MainText>Вы приходите на озеро, сегодня тут удивительно мирно и спокойно, чем заняться?</MainText>
  <PagePicture>lake.jpeg</PagePicture>
- <Item hyperLink="Main_menu.xml">Пойти дальше.</Item>
+ <Item hyperLink="Main_menu.xml">Сделать костер, покушать сальца, и вернуться ко дворцу.</Item>
+ <Item hyperLink="4_lake/Lake_d3_15_1_2.xml">Использовать снаряжение и нырнуть в озеро</Item>
 </QuestPage>

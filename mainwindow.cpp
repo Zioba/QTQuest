@@ -4,6 +4,7 @@
 #include <QNetworkInterface>
 #include <QHostAddress>
 #include <QHostInfo>
+#include <QTime>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -30,6 +31,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->variantsTextEdit->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->variantsTextEdit->verticalHeader()->hide();
     ui->variantsTextEdit->horizontalHeader()->setStretchLastSection(true);
+    QTime time = QTime::currentTime();
+    qsrand((uint)time.msec());
 
     initGame();
     //0 - приемная
@@ -42,6 +45,12 @@ MainWindow::MainWindow(QWidget *parent) :
     //7 - улица
     //8 - кладовка
     //9 - концерт
+}
+
+int MainWindow::randInt(int low, int high)
+{
+    // Random number between low and high
+    return qrand() % ((high + 1) - low) + low;
 }
 
 MainWindow::~MainWindow()
@@ -236,10 +245,26 @@ void MainWindow::mainController(QString message)
             nextPage = "2_director_office/Director_office_d2_21_2.xml";
         }
     }
+    if (nextPage == "4_lake/Lake_d1_11_2_1.xml") {
+        int x = randInt(1,10);
+        switch (x) {
+        case 1:
+            nextPage = "4_lake/Lake_d1_11_2_1.xml";
+            break;
+        case 2:
+            nextPage = "4_lake/Lake_d1_11_2_1_2.xml";
+            break;
+        case 3:
+            nextPage = "4_lake/Lake_d1_11_2_1_3.xml";
+            break;
+        default:
+            break;
+        }
+    }
     if (nextPage == "4_lake/Lake_d1_11_2_2.xml") {
         sum -=500;
     }
-    if (nextPage == "4_lake/Lake_d1_15.xml") {
+    if (nextPage == "4_lake/Lake_d1_15_3.xml") {
         hasRing = true;
     }
     if (nextPage == "4_lake/Lake_d3_8.xml") {
@@ -259,9 +284,14 @@ void MainWindow::mainController(QString message)
             }
             else { nextPage = "4_lake/Lake_d3_15_3.xml"; }
         }
-        else {
-            hasDisk = true;
-            step--;
+    }
+    if (nextPage == "4_lake/Lake_d3_15_1_success.xml") {
+        hasDisk = true;
+        step--;
+    }
+    if (nextPage == "4_lake/Lake_d3_15_1_2.xml") {
+        if (hasRing) {
+            nextPage == "4_lake/Lake_d3_15_1_2_r.xml";
         }
     }
     if (nextPage == "4_lake/Lake_d3_18.xml") {
@@ -313,39 +343,58 @@ void MainWindow::mainController(QString message)
             guardDone = true;
         }
     }
-    //прок ключа
     if (nextPage == "6_toilet/Toilet_d1_18_3.xml") {
         hasKey = true;
     }
-    //прок ключа
-    if (nextPage == "6_toilet/Toilet_d2_18_2.xml" && hasKey == true) {
-        nextPage == "6_toilet/Toilet_d2_18.xml";
+    if (nextPage == "6_toilet/Toilet_d1_18.xml") {
+        int x = randInt(1,2);
+        if( x == 1) {
+            nextPage = "6_toilet/Toilet_d1_18_2.xml";
+        }
     }
-    if (nextPage == "6_toilet/Toilet_d2_18_3.xml") {
-        hasKey = true;
+    if (nextPage == "6_toilet/Toilet_d2_18.xml") {
+        int x = randInt(1,2);
+        if( x == 1 && !hasKey) {
+            nextPage = "6_toilet/Toilet_d1_18_2.xml";
+        }
     }
-    //прок ключа
-    if (nextPage == "6_toilet/Toilet_d3_18_2.xml" && hasKey == true) {
-        nextPage == "6_toilet/Toilet_d3_18.xml";
+    if (nextPage == "6_toilet/Toilet_d3_18.xml") {
+        int x = randInt(1,2);
+        if( x == 1 && !hasKey) {
+            nextPage = "6_toilet/Toilet_d1_18_2.xml";
+        }
     }
-    if (nextPage == "6_toilet/Toilet_d3_18_3.xml") {
-        hasKey = true;
-    }
-    //прок победы
     if (nextPage == "9_storeroom/Storeroom_d1_11.xml") {
-        //прок крыс
+        int x = randInt(0,100);
+        razvetkaDone = true;
+        makeLogNote(QString::number(x,10));
+        if( x < 5) {
+            nextPage = "9_storeroom/Storeroom_1.xml";
+        }
     }
     if (nextPage == "9_storeroom/Storeroom_d1_18.xml") {
-        //прок крыс
+        int x = randInt(1,2);
+        if( x == 1) {
+            nextPage = "9_storeroom/Storeroom_3.xml";
+        }
     }
     if (nextPage == "9_storeroom/Storeroom_d2_11.xml") {
-        //прок крыс
+        int x = randInt(1,2);
+        if( x == 1) {
+            nextPage = "9_storeroom/Storeroom_3.xml";
+        }
     }
     if (nextPage == "9_storeroom/Storeroom_d2_21.xml") {
-        //прок крыс
+        int x = randInt(1,2);
+        if( x == 1) {
+            nextPage = "9_storeroom/Storeroom_3.xml";
+        }
     }
     if (nextPage == "9_storeroom/Storeroom_d3_15.xml") {
-        //прок крыс
+        int x = randInt(1,2);
+        if( x == 1) {
+            nextPage = "9_storeroom/Storeroom_3.xml";
+        }
     }
     if (nextPage == "9_storeroom/Storeroom_d3_18.xml") {
         if (guardDone) {

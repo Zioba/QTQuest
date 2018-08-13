@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE QuestPage>
 <QuestPage>
- <MainText>!дать взятку!</MainText>
+ <MainText>Вы решили не тратить время на разбирательства с гаишником, а просто дали ему взятку, что бы помочь вашему знакомому.
+ Он щедро отблагодарил вас, даже куни предлагал, но вы вежливо отказались, и пошли дальше по своим делам</MainText>
  <PagePicture>velodtp.jpeg</PagePicture>
  <Item hyperLink="4_lake/Lake_d1_11_3.xml">Далее.</Item>
 </QuestPage>

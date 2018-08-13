@@ -1,6 +1,9 @@
 ﻿<!DOCTYPE QuestPage>
 <QuestPage>
- <MainText>!задачка на пдд!</MainText>
+ <MainText>Послушав еще 5 минут, вы поняли в чем дело и суть конфликта, что бы его разрешить вам нужно ответить на вопрос:
+  В каком случае разрешается движение по обочине на велосипеде?</MainText>
  <PagePicture>velodtp.jpeg</PagePicture>
- <Item hyperLink="4_lake/Lake_d1_11_3.xml">Далее.</Item>
+ <Item hyperLink="4_lake/Lake_d1_11_2_1_fail.xml">Только при отсутствии тротуара, велосипедной дорожки и пешеходной дорожки.</Item>
+ <Item hyperLink="4_lake/Lake_d1_11_2_1_fail.xml">Только при отсутствии велосипедной дорожки и пешеходной дорожки.</Item>
+ <Item hyperLink="4_lake/Lake_d1_11_2_1_success.xml">При отсутствии велосипедной дорожки.</Item>
 </QuestPage>

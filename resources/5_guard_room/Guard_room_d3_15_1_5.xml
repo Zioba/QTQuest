@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>"Спасибо, пока". Охранник провожает вас за дверь, закрывается, и идет искать новую работу</MainText>
+ <PagePicture>gurdian.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Видимо это было не то, что нужно</Item>
+</QuestPage>

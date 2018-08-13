@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Кажется вы свернули куда то не туда, к вам подплывает разъяренная акула, и съедает вас, щито поделать(</MainText>
+ <PagePicture>lake.jpeg</PagePicture>
+ <Item hyperLink="New_game.xml">Переродиться в новом цикле вселенной</Item>
+</QuestPage>

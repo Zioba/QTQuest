@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>"Мои полномочия здесь все, я и так показал тебе секретную информацию, а теперь убирайся отсюда" сказал охранник и проводил вас за дверь.</MainText>
+ <PagePicture>gurdian.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Пойти отыскать нарушителя и подставителя подставителя</Item>
+</QuestPage>

@@ -1,0 +1,13 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Вы одели костюм, кстати он сидит на вас очень хорошо, потому что не серый, и не белый в горошек, а изящно желтый, как ваша желтая курточка
+ Куда будем двигаться?
+ 
+ *что то незримое, и еле уловимое в голове советует вам двигаться ниже*</MainText>
+ <PagePicture>pogruzhenie.jpeg</PagePicture>
+ <Item hyperLink="4_lake/Lake_d3_15_1_3_r.xml">Опуститься ниже</Item>
+ <Item hyperLink="4_lake/Lake_d3_15_1_fail.xml">Переместиться назад</Item>
+ <Item hyperLink="4_lake/Lake_d3_15_1_fail.xml">Переместиться правее</Item>
+ <Item hyperLink="4_lake/Lake_d3_15_1_fail.xml">Переместиться вперед</Item>
+ <Item hyperLink="4_lake/Lake_d3_15_1_fail.xml">Переместиться левее</Item>
+</QuestPage>

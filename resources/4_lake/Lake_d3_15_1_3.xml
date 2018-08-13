@@ -1,0 +1,11 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Погружение проходит нормально, пока что вы ничего не нашли. 
+ Куда продолжить движение?</MainText>
+ <PagePicture>pogruzhenie.jpeg</PagePicture>
+ <Item hyperLink="4_lake/Lake_d3_15_1_4.xml">Опуститься ниже</Item>
+ <Item hyperLink="4_lake/Lake_d3_15_1_fail.xml">Переместиться назад</Item>
+ <Item hyperLink="4_lake/Lake_d3_15_1_fail.xml">Переместиться правее</Item>
+ <Item hyperLink="4_lake/Lake_d3_15_1_fail.xml">Переместиться вперед</Item>
+ <Item hyperLink="4_lake/Lake_d3_15_1_fail.xml">Переместиться левее</Item>
+</QuestPage>

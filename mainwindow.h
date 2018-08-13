@@ -67,6 +67,7 @@ private:
     void initGame();
     QString localIP();
     void sendBag();
+    int randInt(int low, int high);
 };
 
 #endif // MAINWINDOW_H
