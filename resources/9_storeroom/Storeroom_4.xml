@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE QuestPage>
 <QuestPage>
  <MainText>!разведка!</MainText>
- <PagePicture>Storeroom.jpeg</PagePicture>
+ <PagePicture>volos.jpeg</PagePicture>
  <Item hyperLink="Main_menu.xml">Далее</Item>
 </QuestPage>

@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>"СИБИЛЛА, НАКОНЕЦ ТО ТЫ НАШЛАСЬ" Обрадовался манкрик. Семья воссоединилась, вы сделали большое доброе дело. Ура чтоли.</MainText>
+ <PagePicture>mankrik.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Помог другим, пора помочь и себе</Item>
+</QuestPage>

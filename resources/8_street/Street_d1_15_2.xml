@@ -1,0 +1,25 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Итак, где же его жена?</MainText>
+ <PagePicture>mankrik.jpeg</PagePicture>
+ <Item hyperLink="8_street/Street_d1_15_3.xml">В торговом ряду №1, на этаже №1, на торговой точке 1</Item>
+ <Item hyperLink="8_street/Street_d1_15_3.xml">В торговом ряду №2, на этаже №1, на торговой точке 1</Item>
+ <Item hyperLink="8_street/Street_d1_15_3.xml">В торговом ряду №3, на этаже №1, на торговой точке 1</Item>
+ <Item hyperLink="8_street/Street_d1_15_3.xml">В торговом ряду №4, на этаже №1, на торговой точке 1</Item>
+ <Item hyperLink="8_street/Street_d1_15_3.xml">В торговом ряду №1, на этаже №1, на торговой точке 2</Item>
+ <Item hyperLink="8_street/Street_d1_15_3.xml">В торговом ряду №2, на этаже №1, на торговой точке 2</Item>
+ <Item hyperLink="8_street/Street_d1_15_3.xml">В торговом ряду №3, на этаже №1, на торговой точке 2</Item>
+ <Item hyperLink="8_street/Street_d1_15_3.xml">В торговом ряду №4, на этаже №1, на торговой точке 2</Item>
+ <Item hyperLink="8_street/Street_d1_15_3.xml">В торговом ряду №1, на этаже №2, на торговой точке 1</Item>
+ <Item hyperLink="8_street/Street_d1_15_3.xml">В торговом ряду №2, на этаже №2, на торговой точке 1</Item>
+ <Item hyperLink="8_street/Street_d1_15_3.xml">В торговом ряду №3, на этаже №2, на торговой точке 1</Item>
+ <Item hyperLink="8_street/Street_d1_15_3.xml">В торговом ряду №4, на этаже №2, на торговой точке 1</Item>
+ <Item hyperLink="8_street/Street_d1_15_3.xml">В торговом ряду №1, на этаже №2, на торговой точке 2</Item>
+ <Item hyperLink="8_street/Street_d1_15_3.xml">В торговом ряду №2, на этаже №2, на торговой точке 2</Item>
+ <Item hyperLink="8_street/Street_d1_15_3.xml">В торговом ряду №3, на этаже №2, на торговой точке 2</Item>
+ <Item hyperLink="8_street/Street_d1_15_4.xml">В торговом ряду №4, на этаже №2, на торговой точке 2</Item>
+ <Item hyperLink="8_street/Street_d1_15_3.xml">В торговом ряду №1, на этаже №3, на торговой точке 1</Item>
+ <Item hyperLink="8_street/Street_d1_15_3.xml">В торговом ряду №2, на этаже №3, на торговой точке 1</Item>
+ <Item hyperLink="8_street/Street_d1_15_3.xml">В торговом ряду №3, на этаже №3, на торговой точке 1</Item>
+ <Item hyperLink="8_street/Street_d1_15_3.xml">В торговом ряду №4, на этаже №3, на торговой точке 1</Item>
+</QuestPage>

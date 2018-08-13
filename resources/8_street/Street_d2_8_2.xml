@@ -1,0 +1,9 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Вы стоите у края дороги, пора начинать движение.
+ В каком темпе начать двигаться?</MainText>
+ <PagePicture>trassa.jpeg</PagePicture>
+ <Item hyperLink="8_street/Street_d2_8_3.xml">Повести дальше медленно</Item>
+ <Item hyperLink="8_street/Street_d2_8_minus_babka.xml">Повести дальше в среднем темпе</Item>
+ <Item hyperLink="8_street/Street_d2_8_too_fast.xml">Повести дальше быстро</Item>
+</QuestPage>

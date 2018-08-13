@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE QuestPage>
 <QuestPage>
  <MainText>!Отдать диск, загадка про сову, посмотреть запись!</MainText>
- <PagePicture>door.jpeg</PagePicture>
+ <PagePicture>gurdian.jpeg</PagePicture>
  <Item hyperLink="Main_menu.xml">Выйти на улицу.</Item>
 </QuestPage>

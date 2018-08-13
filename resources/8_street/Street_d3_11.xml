@@ -1,6 +1,9 @@
 ﻿<!DOCTYPE QuestPage>
 <QuestPage>
- <MainText>!улететь на гоа с богачом!</MainText>
- <PagePicture>Storeroom.jpeg</PagePicture>
- <Item hyperLink="Main_menu.xml">Выйти на улицу</Item>
+ <MainText>Вы идете вдоль проспекта, думаете о своем. И тут внезапно к вам подъезжает статный молодой человек, на феррари, в дорогом наряде.
+ Он рассказывает что искал вас 10 лет, влюбился с первого взгляда, как мимолетом увидел вас на отдыхе в италии давным давно, и вот, наконец, нашел.
+ "Я предлагаю все к твоим ногам, все мои богатства и возможности, давай улетим с тобой на ГОА, и будем жить как враю, вместе, долго и счастливо!"</MainText>
+ <PagePicture>reachCar.jpeg</PagePicture>
+ <Item hyperLink="8_street/Street_d3_11_2.xml">Согласиться</Item>
+ <Item hyperLink="8_street/Street_d3_11_3.xml">Отказаться</Item>
 </QuestPage>

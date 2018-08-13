@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE QuestPage>
 <QuestPage>
  <MainText>Продавщица выпучивает от радости глаза, что наконец то она что продала, отдает вам комплект и инструкцию как им пользоваться, теперь логично пойти на озеро, и поискать ответы там</MainText>
- <PagePicture>shop.jpeg</PagePicture>
+ <PagePicture>Shop.jpeg</PagePicture>
  <Item hyperLink="Main_menu.xml">Вернуться ко входу во дворец</Item>
 </QuestPage>

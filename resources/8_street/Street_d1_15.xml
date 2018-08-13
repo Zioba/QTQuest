@@ -1,6 +1,8 @@
 ﻿<!DOCTYPE QuestPage>
 <QuestPage>
- <MainText>!найти жену манкрика!</MainText>
- <PagePicture>Street.jpeg</PagePicture>
- <Item hyperLink="Main_menu.xml">Вернутся к дворцу</Item>
+ <MainText>Вы идете по проспекту, в новом, неизвестном направлении, в надежде найти какие-либо ответы на какие-нибудь вопросы.
+ И тут встечаете грустного магхарского орка, который представился Манкриком. Он потерял свою жену в торговом центре.
+ Помогите же манкрику найти его жену.</MainText>
+ <PagePicture>mankrik.jpeg</PagePicture>
+ <Item hyperLink="8_street/Street_d1_15_2.xml">Помочь манкрику</Item>
 </QuestPage>

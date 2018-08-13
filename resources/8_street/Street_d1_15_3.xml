@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Ее тут нет, манкрик изменился в лице, разрыдался, и застрелился от горя, вот такой вот поворот...</MainText>
+ <PagePicture>mankrik.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Бля...</Item>
+</QuestPage>

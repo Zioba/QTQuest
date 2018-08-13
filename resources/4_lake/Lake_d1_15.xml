@@ -1,6 +1,8 @@
 ﻿<!DOCTYPE QuestPage>
 <QuestPage>
- <MainText>!Квест на получение кольца!</MainText>
- <PagePicture>ring.jpeg</PagePicture>
- <Item hyperLink="Main_menu.xml">Получить кольцо</Item>
+ <MainText>Находясь на озере, вы замечаете русалку в гопокостюмчике, которая поет песенки и зазывает к себе.
+ "Девица красавица, отгадай загадку, получишь артефакт не виданной силы, не отгадаешь, не пиздюлей тоже не получишь, так что хуль бы и не попробовать?"</MainText>
+ <PagePicture>rusalka.jpeg</PagePicture>
+ <Item hyperLink="4_lake/Lake_d1_15_2.xml">Получить кольцо</Item>
+ <Item hyperLink="Main_menu.xml">Не вестись на провокации, и пойти подальше</Item>
 </QuestPage>

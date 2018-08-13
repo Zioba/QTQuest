@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>"Поздравляю, это правильный ответ. Держи кольцо на интеллект, крайне полезная штука, пригодится"</MainText>
+ <PagePicture>ring.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Получить кольцо</Item>
+</QuestPage>
