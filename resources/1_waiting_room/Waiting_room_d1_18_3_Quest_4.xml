@@ -1,6 +1,8 @@
 ﻿<!DOCTYPE QuestPage>
 <QuestPage>
- <MainText>Вы заходите в туалет, но тут вам дорогу пер</MainText>
+ <MainText>Вы заходите в туалет, но тут вам дорогу перегораживает женщина с младенцем. При виде вас с ребенком она начинает истерично орать, что ее ребеночек стесняется,
+ и не может ходить в туалет когда еще кто то есть. Видимо перед вами еще одна типичная яжмать, с поломанным рассудком</MainText>
  <PagePicture>secretary.jpeg</PagePicture>
- <Item hyperLink="Main_menu.xml">Вернутся к делам.</Item>
+ <Item hyperLink="1_waiting_room/Waiting_room_d1_18_3_Quest_5.xml">Наорать на эту суку как в последний раз</Item>
+ <Item hyperLink="1_waiting_room/Waiting_room_d1_18_3_Quest_4_2.xml">Извиниться, промолчать, и удалиться</Item>
 </QuestPage>

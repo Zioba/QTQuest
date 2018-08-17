@@ -11,6 +11,6 @@
 			C чего бы начать...
 		</p>
 	</MainText>
-	<PagePicture>Street.jpeg</PagePicture>
+	<PagePicture>street.jpeg</PagePicture>
 	<Item hyperLink="Main_Menu.xml">Далее.</Item>
 </QuestPage>

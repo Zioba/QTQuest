@@ -2,6 +2,6 @@
 <QuestPage>
  <MainText>Оказалось, что этот молодой человек - концертный критик, Он образованный человек, с грамотной речью и очень приятен в общении. Вы долго обсуждали прошедший концерт
  и отлично провели время</MainText>
- <PagePicture>Kritik.jpeg</PagePicture>
+ <PagePicture>kritik.jpeg</PagePicture>
  <Item hyperLink="Main_menu.xml">Вернуться к дворцу</Item>
 </QuestPage>

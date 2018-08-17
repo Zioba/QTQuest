@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QUdpSocket>
 #include <QTimer>
 #include <QDateEdit>
 #include <QtXml>
@@ -20,22 +19,17 @@ public:
     ~MainWindow();
 
 private slots:
-    void getMessage();
+    void getMessage(int x, int y);
     void on_addButton_clicked();
-    void on_saveButton_clicked();
     void resize();
+
+    void on_pushButton_clicked();
 
 private:
     const int X_POSITION_FRAME = 0;
     const int Y_POSITION_FRAME = 0;
-    const int LISTERNING_PORT = 5824;
-    const QString myPort = "5824";
-    const QString targetPort = "5825";
 
     Ui::MainWindow *ui;
-    QUdpSocket udpSocket;
-    QHostAddress myIp;
-    QHostAddress targetIp;
 
     QList<QString> possibleLinks;
     int sum;
@@ -58,16 +52,16 @@ private:
     bool razvetkaDone;
     bool duckAlive;
 
-
-    void makeLogNote( QString );
-    void makeLogNoteQ( QString );
     void sendPage(QString pageAddress);
-    void sendElement(QString element);
     void mainController(QString message);
     void initGame();
     QString localIP();
     void sendBag();
     int randInt(int low, int high);
+    void makeLogNotePage(QString s);
+    void makeLogNotePageVariants(QString s);
+    void makeLogNoteBag(QString s);
+    void loadImage(QString s);
 };
 
 #endif // MAINWINDOW_H

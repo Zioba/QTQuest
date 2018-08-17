@@ -4,6 +4,6 @@
 Вы стоите у входа в дворец принцессы, самое время взвесить всю имеющуюся информацию, и понять,
 Что же делать дальше...
 </MainText>
-	<PagePicture>Street.jpeg</PagePicture>
+	<PagePicture>street.jpeg</PagePicture>
 	<Item hyperLink="8_street/Street_d1_8.xml">Прогулятся по улице и собраться с мыслями</Item>
 </QuestPage>

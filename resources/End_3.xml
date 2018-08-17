@@ -1,0 +1,8 @@
+﻿<?xml version="1.0"?>
+<QuestPage pageId="End_3"> 
+	<MainText>
+		Вам не удалось выполнить все условия квеста, и принцесса сделала из вас компот
+	</MainText>
+	<PagePicture>street.jpeg</PagePicture>
+	<Item hyperLink="End_2.xml">Пизда.</Item>
+</QuestPage>

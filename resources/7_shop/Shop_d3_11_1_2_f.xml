@@ -1,0 +1,6 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Уууупс, а денег то у вас больше нет, придется от покупки отказаться</MainText>
+ <PagePicture>Shop.jpeg</PagePicture>
+ <Item hyperLink="Main_menu.xml">Вернуться ко входу во дворец</Item>
+</QuestPage>

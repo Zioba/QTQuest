@@ -1,0 +1,7 @@
+﻿<!DOCTYPE QuestPage>
+<QuestPage>
+ <MainText>Хм... да да, наслышан о вашей проблеме, вчера весь дворец стоит на ушах. Быть, может, я бы и согласился помочь вам, но вы же понимаете,
+ что в наше время никто не делает ничего просто так. Я помогу вам, а вы поможете мне"</MainText>
+ <PagePicture>director.jpeg</PagePicture>
+ <Item hyperLink="2_director_office/Director_office_d2_15_2.xml">Насторожиться...</Item>
+</QuestPage>

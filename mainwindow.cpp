@@ -1,9 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include <QNetworkInterface>
-#include <QHostAddress>
-#include <QHostInfo>
 #include <QTime>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -14,27 +11,23 @@ MainWindow::MainWindow(QWidget *parent) :
     this->move( pos );
     ui->setupUi( this );
     setWindowTitle("Квест Сервер");
-    makeLogNote("Начало работы");
-    udpSocket.bind( LISTERNING_PORT );
-    myIp.setAddress("127.0.0.1");
-    targetIp.setAddress("127.0.0.1");
-    makeLogNote(localIP());
-    ui->stackedWidget->setCurrentIndex(0);
-    connect(&udpSocket, SIGNAL(readyRead()), this, SLOT(getMessage()));
+    ui->stackedWidget->setCurrentIndex(1);
     connect(ui->variantsTextEdit, SIGNAL(cellChanged(int,int)), this, SLOT(resize()));
+    connect(ui->variantsTextEdit, SIGNAL(cellClicked(int ,int)), this, SLOT(getMessage(int, int)));
 
-    ui->variantsTextEdit->setColumnCount(2);
-    ui->variantsTextEdit->setRowCount(1);
-    ui->variantsTextEdit->setHorizontalHeaderLabels({"Команда", "Гиперссылка"});
+    ui->variantsTextEdit->setColumnCount(1);
+    ui->variantsTextEdit->setRowCount(0);
     ui->variantsTextEdit->setShowGrid(true);
     ui->variantsTextEdit->setSelectionMode(QAbstractItemView::SingleSelection);
     ui->variantsTextEdit->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->variantsTextEdit->verticalHeader()->hide();
+    ui->variantsTextEdit->horizontalHeader()->hide();
     ui->variantsTextEdit->horizontalHeader()->setStretchLastSection(true);
     QTime time = QTime::currentTime();
     qsrand((uint)time.msec());
 
     initGame();
+    mainController("-1");
     //0 - приемная
     //1 - кабинет директора
     //2 - ресепшн
@@ -58,22 +51,41 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::makeLogNote(QString s)
+void MainWindow::makeLogNotePage(QString s)
 {
-    ui->logField->append( tr( "%1 %2" ).arg(QTime::currentTime().toString("hh:mm:ss"))
-                          .arg(s));
+    ui->mainTextField->setText(s);
 }
 
-void MainWindow::makeLogNoteQ(QString s)
+void MainWindow::makeLogNotePageVariants(QString s)
 {
-    ui->questInformation->append( tr( "%1 %2" ).arg(QTime::currentTime().toString("hh:mm:ss"))
-                          .arg(s));
+    ui->variantsTextEdit->insertRow(ui->variantsTextEdit->rowCount());
+    QTableWidgetItem *item = new QTableWidgetItem;
+    item->setText(s);
+    ui->variantsTextEdit->setItem(ui->variantsTextEdit->rowCount()-1, 0, item);
+}
+
+void MainWindow::makeLogNoteBag(QString s)
+{
+    ui->bagField->append(s);
+}
+
+void MainWindow::loadImage(QString s)
+{
+    //QString str = "C:/QTWork/QTQuest/resources/images/";
+    QString str = ":/resources/images/";
+    str.append(s);
+    QPixmap myPixmap( str );
+    myPixmap=myPixmap.scaled(500,500);
+    ui->pictureLabel->setPixmap( myPixmap );
+    this->update();
+
 }
 
 void MainWindow::sendPage(QString pageAddress)
 {
+    ui->variantsTextEdit->setRowCount(0);
     //QString str = ":/resources/";
-    QString str = "C:/QTWork/QTQuestServer/resources/";
+    QString str = "C:/QTWork/QTQuest/resources/";
     str.append(pageAddress);
     possibleLinks.clear();
     QDomDocument domDoc;
@@ -85,15 +97,15 @@ void MainWindow::sendPage(QString pageAddress)
                 if(domNode.isElement()) {
                     QDomElement domElement = domNode.toElement();
                     if(!domElement.isNull()) {
-                        if (domElement.text() == "Сходить на концерт.") {
-                            if ((step%5 == 3) || (step%5 == 4)) {
-                                sendElement(domElement.text());
-                            }
-                        }
-                        else {
-                            sendElement(domElement.text());
-                        }
                         if(domElement.tagName() == "Item") {
+                            if (domElement.text() == "Сходить на концерт.") {
+                                if ((step%5 == 3) || (step%5 == 4)) {
+                                    makeLogNotePageVariants(domElement.text());
+                                }
+                            }
+                            else {
+                                makeLogNotePageVariants(domElement.text());
+                            }
                             if (newMove) {
                                 QString s = domElement.attribute("hyperLink", "");
                                 if (s == "10_concert/Concert") {
@@ -111,6 +123,12 @@ void MainWindow::sendPage(QString pageAddress)
                                 possibleLinks.push_back(domElement.attribute("hyperLink", ""));
                             }
                         }
+                        if(domElement.tagName() == "MainText") {
+                           makeLogNotePage(domElement.text());
+                        }
+                        if(domElement.tagName() == "PagePicture") {
+                           loadImage(domElement.text());
+                        }
                     }
                 }
                 domNode = domNode.nextSibling();
@@ -118,34 +136,32 @@ void MainWindow::sendPage(QString pageAddress)
         }
         file.close();
     }
+    else {
+        makeLogNotePage("error");
+    }
     if (newMove) { newMove = false; }
-    sendElement("#");
+    ui->bagField->clear();
     sendBag();
 }
 
-void MainWindow::sendElement(QString element)
+void MainWindow::getMessage(int x, int y)
 {
-    QByteArray datagram;
-    datagram.append(element);
-    udpSocket.writeDatagram(datagram, targetIp, targetPort.toLong(Q_NULLPTR, 10));
-}
-
-void MainWindow::getMessage()
-{
-    QByteArray datagram;
-    datagram.resize( udpSocket.pendingDatagramSize() );
-    udpSocket.readDatagram( datagram.data(), datagram.size() );
-    QString str(datagram);
-    makeLogNote("Получено - " + str);
+    QString str(QString::number(x,10));
     mainController(str);
 }
 
 void MainWindow::mainController(QString message)
 {
     QString nextPage;
-    if (message == "-1" || nextPage == "Intro_1.xml") {
+    if (message == "-1") {
         initGame();
-        playerName = message;
+        nextPage = "Intro_1.xml";
+    }
+    else {
+        nextPage = possibleLinks.at(message.toInt(Q_NULLPTR, 10));
+    }
+    if (nextPage == "Intro_1.xml") {
+        initGame();
         nextPage = "Intro_1.xml";
     }
     else {
@@ -198,7 +214,6 @@ void MainWindow::mainController(QString message)
             nextPage = "End.xml";
             break;
         }
-        makeLogNoteQ(pripiska);
     }
     if (nextPage == "End.xml") {
         if(!razvetkaDone) {
@@ -215,11 +230,7 @@ void MainWindow::mainController(QString message)
             nextPage = "End.xml";
         }
     }
-    //========================
-    if (nextPage == "1_waiting_room/Waiting_room_d1_18_3_Quest.xml") {
-        yazhmatDone = true;
-    }
-    if (nextPage == "1_waiting_room/Waiting_room_d2_8_3_Quest.xml") {
+    if (nextPage == "1_waiting_room/Waiting_room_d1_18_3_Quest_5.xml") {
         yazhmatDone = true;
     }
     if (nextPage == "1_waiting_room/Waiting_room_d2_18.xml") {
@@ -233,6 +244,11 @@ void MainWindow::mainController(QString message)
         }
         else {
             nextPage = "2_director_office/Director_office_d2_11.xml";
+        }
+    }
+    if (nextPage == "2_director_office/Director_office_d2_15_2.xml") {
+        if (hasKey) {
+          nextPage = "2_director_office/Director_office_d2_15_2_2.xml";
         }
     }
     if (nextPage == "2_director_office/Director_office_d2_18.xml") {
@@ -291,7 +307,7 @@ void MainWindow::mainController(QString message)
     }
     if (nextPage == "4_lake/Lake_d3_15_1_2.xml") {
         if (hasRing) {
-            nextPage == "4_lake/Lake_d3_15_1_2_r.xml";
+            nextPage = "4_lake/Lake_d3_15_1_2_r.xml";
         }
     }
     if (nextPage == "4_lake/Lake_d3_18.xml") {
@@ -309,7 +325,7 @@ void MainWindow::mainController(QString message)
             if (hasKey) {
                 nextPage = "5_guard_room/Guard_room_d3_8_3.xml";
             }
-            else { nextPage = "5_guard_room/Guard_room_d3_2.xml"; }
+            else { nextPage = "5_guard_room/Guard_room_d3_8_2.xml"; }
         }
         else {
             zagadkaDone = true;
@@ -318,7 +334,7 @@ void MainWindow::mainController(QString message)
     if (nextPage == "5_guard_room/Guard_room_d3_15.xml") {
         if (!hasDisk) {
             if (!hasMandat) {
-                nextPage = "5_guard_room/Guard_room_15_2.xml";
+                nextPage = "5_guard_room/Guard_room_d3_15_2.xml";
             }
             else {
                 nextPage = "5_guard_room/Guard_room_d3_15_3.xml";
@@ -341,6 +357,11 @@ void MainWindow::mainController(QString message)
         }
         else {
             guardDone = true;
+        }
+    }
+    if (nextPage == "5_guard_room/Guard_room_d3_18.xml") {
+        if (hasRing) {
+            nextPage = "5_guard_room/Guard_room_d3_18_0.xml";
         }
     }
     if (nextPage == "6_toilet/Toilet_d1_18_3.xml") {
@@ -367,7 +388,6 @@ void MainWindow::mainController(QString message)
     if (nextPage == "9_storeroom/Storeroom_d1_11.xml") {
         int x = randInt(0,100);
         razvetkaDone = true;
-        makeLogNote(QString::number(x,10));
         if( x < 5) {
             nextPage = "9_storeroom/Storeroom_1.xml";
         }
@@ -399,8 +419,15 @@ void MainWindow::mainController(QString message)
     if (nextPage == "9_storeroom/Storeroom_d3_18.xml") {
         if (guardDone) {
             nextPage = "9_storeroom/Storeroom_4.xml";
-            razvetkaDone = true;
         }
+    }
+    if (nextPage == "9_storeroom/Storeroom_4.xml") {
+        if (hasTestDNK) {
+            nextPage = "9_storeroom/Storeroom_4_2.xml";
+        }
+    }
+    if (nextPage == "9_storeroom/Storeroom_4_4.xml") {
+        razvetkaDone = true;
     }
     if (nextPage == "10_concert/Concert_d2_21.xml") {
         if (directorDone) {
@@ -420,8 +447,13 @@ void MainWindow::mainController(QString message)
         }
     }
     if (nextPage == "7_shop/Shop_d3_11_1_2.xml") {
-        hasAqua = true;
-        sum -=500;
+        if (sum == 0) {
+            nextPage = "7_shop/Shop_d3_11_1_2_f.xml";
+        }
+        else {
+            sum -=500;
+            hasAqua = true;
+        }
     }
     if (nextPage == "8_street/Street_d1_21_3.xml") {
         hasTestDNK = true;
@@ -433,7 +465,7 @@ void MainWindow::mainController(QString message)
 void MainWindow::initGame()
 {
     sum = 1000;
-    step = 0;
+    step = 0; //0
     playerName = "0";
     newMove = false;
     pripiska = "";
@@ -452,49 +484,73 @@ void MainWindow::initGame()
 }
 
 void MainWindow::sendBag() {
+    switch (step) {
+    case 1:
+        makeLogNoteBag("День: 1, время: 11:00");
+        break;
+    case 2:
+        makeLogNoteBag("День: 1, время: 15:00");
+        break;
+    case 3:
+        makeLogNoteBag("День: 1, время: 18:00");
+        break;
+    case 4:
+        makeLogNoteBag("День: 1, время: 21:00");
+        break;
+    case 5:
+        makeLogNoteBag("День: 2, время: 8:00");
+        break;
+    case 6:
+        makeLogNoteBag("День: 2, время: 11:00");
+        break;
+    case 7:
+        makeLogNoteBag("День: 2, время: 15:00");
+        break;
+    case 8:
+        makeLogNoteBag("День: 2, время: 18:00");
+        break;
+    case 9:
+        makeLogNoteBag("День: 2, время: 21:00");
+        break;
+    case 10:
+        makeLogNoteBag("День: 3, время: 8:00");
+        break;
+    case 11:
+        makeLogNoteBag("День: 3, время: 11:00");
+        break;
+    case 12:
+        makeLogNoteBag("День: 3, время: 15:00");
+        break;
+    case 13:
+        makeLogNoteBag("День: 3, время: 18:00");
+        break;
+    default:
+        break;
+    }
     QString s("Сумма: ");
     s.append(QString::number(sum,10));
-    sendElement(s);
+    makeLogNoteBag(s);
     if (hasCookie) {
-        sendElement("Печеньки");
+         makeLogNoteBag("Печеньки");
     }
     if (hasKey) {
-        sendElement("Газовый ключ");
+         makeLogNoteBag("Газовый ключ");
     }
     if (hasAqua) {
-        sendElement("Водолазный комплект");
+         makeLogNoteBag("Водолазный комплект");
     }
     if (hasTestDNK) {
-        sendElement("Экспресс тестДНК");
+         makeLogNoteBag("Экспресс тестДНК");
     }
     if (hasDisk) {
-        sendElement("Диск доты");
+         makeLogNoteBag("Диск доты");
     }
     if (hasMandat) {
-        sendElement("Мандат от директора");
+         makeLogNoteBag("Мандат от директора");
     }
     if (hasRing) {
-        sendElement("Кольцо на интеллект");
+         makeLogNoteBag("Кольцо на интеллект");
     }
-}
-
-QString MainWindow::localIP()
-{
-  /*QString locIP;
-  QList<QHostAddress> addr = QNetworkInterface::allAddresses();
-  locIP = addr.first().toString();*/
-    QString ipAddress ="";
-    QHostInfo info = QHostInfo::fromName( QHostInfo::localHostName() );
-    QList<QHostAddress> listAddr= info.addresses();
-    for( int i = 0; i < listAddr.size(); i ++ )
-    {
-        if( listAddr.at(i).protocol() == QAbstractSocket::IPv4Protocol )
-        {
-            ipAddress += " | ";
-            ipAddress += listAddr.at(i).toString();
-        }
-    }
-    return ipAddress;
 }
 
 void MainWindow::on_addButton_clicked()
@@ -502,41 +558,13 @@ void MainWindow::on_addButton_clicked()
     ui->variantsTextEdit->setRowCount(ui->variantsTextEdit->rowCount()+1);
 }
 
-void MainWindow::on_saveButton_clicked()
-{
-    QString fileName = "C:/QTWork/QTQuestServer/resources/";
-    fileName = fileName.append(ui->fileNameLine->text());
-    fileName = fileName.append(".xml");
-    QDomDocument doc("QuestPage");
-        QDomElement  domElement = doc.createElement("QuestPage");
-        doc.appendChild(domElement);
-
-        QDomElement contact = doc.createElement("MainText");
-        QDomText domText = doc.createTextNode(ui->mainTextEdit->toPlainText().toUtf8());
-        contact.appendChild(domText);
-        domElement.appendChild(contact);
-        contact = doc.createElement("PagePicture");
-        domText = doc.createTextNode(ui->pictureLineEdit->text().toUtf8());
-        contact.appendChild(domText);
-        domElement.appendChild(contact);
-
-        for (int i = 0; i < ui->variantsTextEdit->rowCount(); i++) {
-            contact = doc.createElement("Item");
-            domText = doc.createTextNode(ui->variantsTextEdit->item(i,0)->text().toUtf8());
-            contact.appendChild(domText);
-            QDomAttr domAttr = doc.createAttribute("hyperLink");
-            domAttr.setValue(ui->variantsTextEdit->item(i,1)->text().toUtf8());
-            contact.setAttributeNode(domAttr);
-            domElement.appendChild(contact);
-        }
-        QFile file(fileName);
-        if(file.open(QIODevice::WriteOnly)) {
-            QTextStream(&file) << doc.toString();
-            file.close();
-        }
-}
-
 void MainWindow::resize()
 {
     ui->variantsTextEdit->resizeColumnsToContents();
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    initGame();
+    mainController("-1");
 }

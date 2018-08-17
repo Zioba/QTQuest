@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0"?>
 <QuestPage pageId="Intro_2"> 
-	<MainText>
-		Вы проиграли :-(
+	<MainText>Вы проиграли :-(
 	</MainText>
-	<PagePicture>Street.jpeg</PagePicture>
+	<PagePicture>street.jpeg</PagePicture>
 	<Item hyperLink="Intro_1.xml">Начать заного</Item>
 </QuestPage>
