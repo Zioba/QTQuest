@@ -273,5 +273,7 @@
         <file>resources/Main_menu.xml</file>
         <file>resources/New_game.xml</file>
         <file>resources/Reception_d1_18 (todo).xml</file>
+        <file>resources/End_4.xml</file>
+        <file>resources/5_guard_room/Guard_room_d3_15_0.xml</file>
     </qresource>
 </RCC>

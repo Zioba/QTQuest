@@ -2,7 +2,7 @@
 <QuestPage>
  <MainText>Вы идете по улице вокруг дворца, и тут ваше внимание привлекает новый объект, которого никогда раньше не было.
  К вам приехала палатка с различными товарами, стоит посмотреть что там есть.</MainText>
- <PagePicture>Street.jpeg</PagePicture>
+ <PagePicture>street.jpeg</PagePicture>
  <Item hyperLink="Main_menu.xml">Скажем дружно, нахуй нужно</Item>
  <Item hyperLink="8_street/Street_d1_21_2.xml">Ознакомится с ассортиментом</Item>
 </QuestPage>

@@ -84,8 +84,8 @@ void MainWindow::loadImage(QString s)
 void MainWindow::sendPage(QString pageAddress)
 {
     ui->variantsTextEdit->setRowCount(0);
-    //QString str = ":/resources/";
-    QString str = "C:/QTWork/QTQuest/resources/";
+    QString str = ":/resources/";
+    //QString str = "C:/QTWork/QTQuest/resources/";
     str.append(pageAddress);
     possibleLinks.clear();
     QDomDocument domDoc;
@@ -262,7 +262,7 @@ void MainWindow::mainController(QString message)
         }
     }
     if (nextPage == "4_lake/Lake_d1_11_2_1.xml") {
-        int x = randInt(1,10);
+        int x = randInt(1,3);
         switch (x) {
         case 1:
             nextPage = "4_lake/Lake_d1_11_2_1.xml";
@@ -282,6 +282,7 @@ void MainWindow::mainController(QString message)
     }
     if (nextPage == "4_lake/Lake_d1_15_3.xml") {
         hasRing = true;
+        step++;
     }
     if (nextPage == "4_lake/Lake_d3_8.xml") {
         if (!duckAlive) {
@@ -362,6 +363,11 @@ void MainWindow::mainController(QString message)
     if (nextPage == "5_guard_room/Guard_room_d3_18.xml") {
         if (hasRing) {
             nextPage = "5_guard_room/Guard_room_d3_18_0.xml";
+        }
+    }
+    if (nextPage == "5_guard_room/Guard_room_d3_15.xml") {
+        if (hasRing) {
+            nextPage = "5_guard_room/Guard_room_d3_15_0.xml";
         }
     }
     if (nextPage == "6_toilet/Toilet_d1_18_3.xml") {

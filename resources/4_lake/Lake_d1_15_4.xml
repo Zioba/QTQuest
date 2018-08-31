@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE QuestPage>
 <QuestPage>
- <MainText>"Поздравляю, это правильный ответ. Убирайся с глаз моих, и побыстрее"</MainText>
+ <MainText>"Поздравляю, это не правильный ответ. Убирайся с глаз моих, и побыстрее"</MainText>
  <PagePicture>rusalka.jpeg</PagePicture>
  <Item hyperLink="Main_menu.xml">Убраться с глаз русалки</Item>
 </QuestPage>

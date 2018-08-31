@@ -1,0 +1,9 @@
+﻿<?xml version="1.0"?>
+<QuestPage pageId="End"> 
+	<MainText>
+Жаль, но вы так и не узнаете мотивацию главного злодея, и почему он хотел подставить вас.
+Аффтар настолько ленивый пидор, что решил просто не додумывать мотивацию антогониста, все претензии принимаются в письменной форме на почту zioba1404@gmail.com
+и да, с ДР тип =)	</MainText>
+	<PagePicture>street.jpeg</PagePicture>
+	<Item hyperLink="End.xml">Ура.</Item>
+</QuestPage>
